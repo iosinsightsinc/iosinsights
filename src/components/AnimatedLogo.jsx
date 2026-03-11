@@ -28,7 +28,7 @@ export default function AnimatedLogo({ className = "" }) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain drop-shadow-xl"
                         // Fallback: if video can't play, mark it ended immediately
                         onError={() => setVideoEnded(true)}
                     />
@@ -42,9 +42,18 @@ export default function AnimatedLogo({ className = "" }) {
                         key="logo-static"
                         src="/logo.png"
                         alt="iOS Insights — Untangling the Mind"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        initial={{ opacity: 0, scale: 0.98 }}
+                        animate={{ 
+                            opacity: 1, 
+                            scale: 1,
+                            y: [0, -5, 0]
+                        }}
+                        transition={{ 
+                            opacity: { duration: 1.2, ease: "easeOut" },
+                            scale: { duration: 1.2, ease: "easeOut" },
+                            y: { duration: 5, repeat: Infinity, ease: "easeInOut" }
+                        }}
+                        style={{ filter: "drop-shadow(0px 8px 24px rgba(154, 123, 154, 0.3))" }}
                         className="w-full h-full object-contain absolute inset-0"
                     />
                 )}

@@ -1,88 +1,153 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import FloatingOrbs from "./FloatingOrbs";
 
-export default function Approach() {
+const credentials = [
+    "Registered Psychologist (#6706) — College of Alberta Psychologists",
+    "Psychological Associate (#125A) — Psychological Association of Manitoba",
+    "Registered Psychologist (#1290) — Saskatchewan College of Psychologists",
+    "NIHB-Approved Provider — Alberta & Nova Scotia",
+];
+
+const specialties = [
+    "Trauma-Informed Therapy",
+    "Emotion-Focused Therapy",
+    "Internal Family Systems (IFS)",
+    "Somatic Therapy",
+    "Play Therapy",
+    "Acceptance & Commitment (ACT)",
+];
+
+export default function AboutMe() {
     return (
-        <section className="w-full py-24 bg-white px-6">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <section style={{ backgroundColor: "var(--color-cream)", position: "relative", overflow: "hidden" }} className="w-full py-28 px-6">
+            <FloatingOrbs variant="cream" />
+            <div className="max-w-7xl mx-auto relative z-10">
 
-                {/* Left Side: Text content */}
-                <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="space-y-8"
-                >
-                    <div className="flex items-center gap-4">
-                        <div className="w-12 h-[1px] bg-primary"></div>
-                        <span className="uppercase tracking-widest text-primary text-xs font-semibold">Our Approach</span>
-                    </div>
+                {/* Two-column: Photo + Bio */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                    <h2 className="text-4xl md:text-5xl font-serif text-text leading-tight">
-                        Untangling the <br /> <span className="italic text-text/80">Insidious Monster</span>
-                    </h2>
-
-                    <div className="space-y-4 text-text/70 font-light leading-relaxed whitespace-pre-line">
-                        <p>
-                            Depression and anxiety can often feel like a deeply wound ball of yarn—a tangled, overwhelming mess in the mind that makes the simplest tasks feel impossible.
-                        </p>
-                        <p>
-                            At iOS Insights, we don't just treat the surface symptoms. We gently pull at the threads. Through deep, empathetic counselling, we help you uncover the subconscious blocks and unravel the knots that have been holding you back.
-                        </p>
-                        <p>
-                            The goal isn't just survival; it's transformation. Let us help you resolve the chaos into a clear, single thread of purpose, allowing you to cultivate an elegant mind.
-                        </p>
-                    </div>
-
-                    <button className="mt-4 pb-1 border-b border-text text-text uppercase tracking-widest text-sm hover:text-primary hover:border-primary transition-colors">
-                        Our Philosophy
-                    </button>
-                </motion.div>
-
-                {/* Right Side: Visual Metaphor using SVG animation */}
-                <div className="relative h-96 w-full flex items-center justify-center bg-background/50 rounded-3xl overflow-hidden p-8">
-                    <motion.svg
-                        viewBox="0 0 500 500"
-                        className="w-full h-full max-w-sm"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-100px" }}
+                    {/* Left: Photo */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        className="relative"
                     >
-                        {/* Tangled mess */}
-                        <motion.path
-                            d="M100,250 C120,100 200,300 150,200 C100,100 300,50 250,150 C200,250 100,350 150,400 C200,450 300,300 250,250 C200,200 150,250 200,300 C250,350 350,250 300,150 C250,50 400,200 450,250"
-                            fill="transparent"
-                            stroke="#333333"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            variants={{
-                                hidden: { pathLength: 0, opacity: 0 },
-                                visible: {
-                                    pathLength: 1,
-                                    opacity: [0, 1, 1, 0.2],
-                                    transition: { duration: 3, ease: "easeInOut", times: [0, 0.2, 0.8, 1] }
-                                }
+                        {/* Decorative accent behind photo */}
+                        <div style={{
+                            position: "absolute", top: "-1.5rem", left: "-1.5rem",
+                            width: "100%", height: "100%", borderRadius: "1.5rem",
+                            border: "2px solid var(--color-lilac)", opacity: 0.4,
+                        }} />
+                        <div style={{
+                            position: "absolute", bottom: "-1.5rem", right: "-1.5rem",
+                            width: "60%", height: "60%", borderRadius: "1.5rem",
+                            backgroundColor: "var(--color-wine)", opacity: 0.15,
+                        }} />
+                        <img
+                            src="/iso-profile.png"
+                            alt="Isoken (Iso) Ogumbor — Registered Clinical Psychologist"
+                            style={{
+                                width: "100%", borderRadius: "1.5rem",
+                                objectFit: "cover", aspectRatio: "4/5",
+                                position: "relative", zIndex: 1,
+                                boxShadow: "0 20px 60px rgba(44,27,44,0.15)",
                             }}
                         />
-                        {/* Straightened line */}
-                        <motion.path
-                            d="M50,250 L450,250"
-                            fill="transparent"
-                            stroke="#8A9A86"
-                            strokeWidth="4"
-                            strokeLinecap="round"
-                            variants={{
-                                hidden: { pathLength: 0, opacity: 0 },
-                                visible: {
-                                    pathLength: 1,
-                                    opacity: 1,
-                                    transition: { delay: 2.5, duration: 1.5, ease: "easeOut" }
-                                }
-                            }}
-                        />
-                    </motion.svg>
+                    </motion.div>
+
+                    {/* Right: Bio */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
+                        className="space-y-6"
+                    >
+                        <p className="section-label">Meet Your Therapist</p>
+                        <div className="divider" />
+                        <h2 style={{
+                            fontFamily: "var(--font-serif)", fontSize: "clamp(2.2rem, 4vw, 3.4rem)",
+                            color: "var(--color-text-dark)", lineHeight: 1.15,
+                        }}>
+                            Hi, I'm Isoken<br />
+                            <em style={{ color: "var(--color-wine)" }}>(Iso) Ogumbor</em>
+                        </h2>
+                        <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: "var(--color-wine)", fontStyle: "italic" }}>
+                            Registered Clinical Psychologist
+                        </p>
+                        <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
+                            As a BIPOC and neurodivergent psychologist, I am dedicated to helping others reach a place where they feel like they can <strong style={{ color: "var(--color-text-dark)" }}>chill</strong> — aka "choose how I live life"™ — instead of feeling like life has been chosen for them.
+                        </p>
+                        <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
+                            I have over 7 years of experience offering therapy to adults, teens, and children in need. I hold additional certifications in trauma-informed expressive arts, attachment-focused therapy, flash therapy, emotion-focused individual & family therapy, and play therapy.
+                        </p>
+
+                        {/* Safety Guide Quote */}
+                        <div style={{
+                            borderLeft: "3px solid var(--color-wine)",
+                            paddingLeft: "1.5rem", marginTop: "0.5rem",
+                        }}>
+                            <p style={{
+                                fontFamily: "var(--font-serif)", fontSize: "1.35rem",
+                                color: "var(--color-text-dark)", lineHeight: 1.85,
+                                fontStyle: "italic",
+                            }}>
+                                If we are not taught or shown better, we can not do better. Think of me like a safety guide who will guide the intentional exploration of the intertwining nature of your learnt coping skills, relationships, past experiences and events, thoughts, feelings, and actions to ultimately help shift you from a state of <strong>'surviving'</strong> to a place where you are <strong>'thriving'</strong>.
+                            </p>
+                        </div>
+
+                        {/* Credentials pills */}
+                        <div className="flex flex-wrap gap-2 pt-2">
+                            {specialties.map((s, i) => (
+                                <span key={i} style={{
+                                    backgroundColor: "rgba(144,70,92,0.08)", color: "var(--color-wine)",
+                                    fontSize: "0.7rem", letterSpacing: "0.1em", fontWeight: 600,
+                                    padding: "0.4rem 1rem", borderRadius: "9999px", textTransform: "uppercase",
+                                }}>
+                                    {s}
+                                </span>
+                            ))}
+                        </div>
+
+                        <div className="flex items-center gap-6 pt-4">
+                            <Link to="/approach" className="btn-primary">Read My Approach</Link>
+                            <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer"
+                                style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--color-wine)", fontWeight: 600, textDecoration: "none", transition: "all 0.3s ease", display: "inline-block" }}
+                                onMouseOver={e => e.currentTarget.style.transform = "translateY(-2px)"}
+                                onMouseOut={e => e.currentTarget.style.transform = "translateY(0)"}
+                            >
+                                Connect with Me →
+                            </a>
+                        </div>
+                    </motion.div>
                 </div>
 
+                {/* Credentials ribbon */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    style={{
+                        marginTop: "5rem", padding: "3rem",
+                        backgroundColor: "var(--color-cream-dark)",
+                        borderRadius: "1.5rem",
+                        border: "1px solid var(--color-lilac)",
+                    }}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                >
+                    {credentials.map((cred, i) => (
+                        <div key={i} className="flex items-start gap-3">
+                            <span style={{ color: "var(--color-wine)", fontSize: "1.2rem", lineHeight: 1, flexShrink: 0, marginTop: "0.15rem" }}>✦</span>
+                            <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.15rem", lineHeight: 1.6 }}>
+                                {cred}
+                            </p>
+                        </div>
+                    ))}
+                </motion.div>
             </div>
         </section>
     );

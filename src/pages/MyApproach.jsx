@@ -1,0 +1,330 @@
+import { motion } from "framer-motion";
+import PulsingLogo from "../components/PulsingLogo";
+import { CheckCircle2, Heart, Brain, Shield, Users, Sparkles, BookOpen } from "lucide-react";
+
+const approachPrinciples = [
+    {
+        icon: <Heart size={28} strokeWidth={1.5} />,
+        title: "Trauma-Informed & Person-Centered",
+        body: "I operate from a trauma-informed and person-centered approach. I aim to listen non-judgmentally and with care. Most importantly, I believe that people are resilient."
+    },
+    {
+        icon: <Brain size={28} strokeWidth={1.5} />,
+        title: "Safe Therapeutic Relationship",
+        body: "I focus on developing a safe therapeutic relationship, which includes healthy authentic communication, and makes use of humor, information sharing, and evidence-based approaches."
+    },
+    {
+        icon: <Shield size={28} strokeWidth={1.5} />,
+        title: "Culturally Sensitive Treatment",
+        body: "I aim to offer culturally sensitive treatment, which includes the acknowledgment and encouragement of people to explore the way their thoughts, feelings, and surroundings impact the choices they make."
+    },
+    {
+        icon: <Users size={28} strokeWidth={1.5} />,
+        title: "Connection & Healing",
+        body: "Humans are social animals; our brains are built for connection. We crave safe relationships to support us to feel, heal, deal, and grow. We all want to be the best version of ourselves."
+    },
+    {
+        icon: <Sparkles size={28} strokeWidth={1.5} />,
+        title: "Warm Presence",
+        body: "My approach within sessions is to intentionally strive to provide a warm presence — to listen with care, to be open to diverse opinions and most importantly, to remember that resilience will amount from how I am with you."
+    },
+    {
+        icon: <BookOpen size={28} strokeWidth={1.5} />,
+        title: "Holistic Perspective",
+        body: "My multifaceted and holistic perspective complements my ability to support in the healing of traumatic experiences and facilitate post-traumatic growth."
+    },
+];
+
+const therapyModalities = [
+    "Emotion-Focused Therapy (EFT)",
+    "Somatic Therapy",
+    "Internal Family Systems (IFS)",
+    "Acceptance & Commitment Therapy (ACT)",
+    "Trauma Focused-Cognitive Behavioural Therapy (TF-CBT)",
+    "Strengths Based Therapy",
+    "Solution-Focused Therapy",
+    "Motivational Interviewing",
+    "Thera-play (Level One Foundational)",
+    "Trauma-Focused Expressive Arts Therapy",
+    "Cognitive Processing Therapy (CPT)",
+    "Flash Therapy",
+];
+
+const education = [
+    "Master of Counselling (Applied Psychology) — University of Lethbridge, 2019",
+    "School of Graduate Studies Silver Medal of Merit Award recipient",
+    "9+ years of clinical experience in evidence-based assessment, diagnosis, and treatment",
+    "Worked with non-profit organizations, school-based services, and Alberta Health Services",
+    "Currently completing ADHD Certified Clinical Services Provider (ADHD-CCSP) certification",
+];
+
+export default function MyApproach() {
+    return (
+        <div style={{ backgroundColor: "var(--color-cream)" }} className="w-full pt-28">
+
+            {/* Hero Banner — Wine with photo */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                style={{ backgroundColor: "var(--color-wine)", padding: "5rem 1.5rem" }}
+            >
+                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    {/* Photo */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        className="relative mx-auto md:mx-0"
+                        style={{ maxWidth: "380px" }}
+                    >
+                        <div style={{
+                            position: "absolute", top: "-1rem", left: "-1rem",
+                            width: "100%", height: "100%", borderRadius: "1.5rem",
+                            border: "2px solid var(--color-lilac)", opacity: 0.3,
+                        }} />
+                        <img
+                            src="/iso-profile.png"
+                            alt="Isoken (Iso) Ogumbor"
+                            style={{
+                                width: "100%", borderRadius: "1.5rem",
+                                objectFit: "cover", aspectRatio: "4/5",
+                                position: "relative", zIndex: 1,
+                                boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
+                            }}
+                        />
+                    </motion.div>
+
+                    {/* Text */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, delay: 0.3 }}
+                        className="text-center md:text-left"
+                    >
+                        <p style={{
+                            fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
+                            letterSpacing: "0.2em", textTransform: "uppercase",
+                            color: "var(--color-lilac)", marginBottom: "1.5rem",
+                        }}>
+                            How I Work
+                        </p>
+                        <h1 style={{
+                            fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
+                            color: "var(--color-cream)", lineHeight: 1.1,
+                            marginBottom: "2rem",
+                        }}>
+                            My Approach <br />
+                            <em style={{ color: "rgba(254,251,236,0.65)" }}>to Healing & Growth</em>
+                        </h1>
+                        <p style={{
+                            color: "rgba(254,251,236,0.7)", fontWeight: 400,
+                            fontSize: "1.2rem", lineHeight: 1.9
+                        }}>
+                            When we are supported to identify and address the unmet needs that may block us from feeling like 'our best', we gain a greater sense of self.
+                        </p>
+                    </motion.div>
+                </div>
+            </motion.div>
+
+            {/* Core Approach Principles */}
+            <div className="max-w-7xl mx-auto px-6 py-24">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
+                    <p className="section-label mb-4">Core Principles</p>
+                    <h2 style={{
+                        fontFamily: "var(--font-serif)", fontSize: "clamp(2rem, 3.5vw, 3rem)",
+                        color: "var(--color-text-dark)", lineHeight: 1.15, maxWidth: "600px", margin: "0 auto",
+                    }}>
+                        The Foundation of<br /> <em>My Therapeutic Practice</em>
+                    </h2>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {approachPrinciples.map((principle, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 25 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.7, delay: i * 0.1 }}
+                            style={{
+                                backgroundColor: "var(--color-cream-dark)",
+                                borderRadius: "1.25rem", padding: "2.5rem",
+                                border: "1px solid rgba(200,162,200,0.2)",
+                                transition: "transform 0.3s, box-shadow 0.3s",
+                            }}
+                            className="hover:shadow-lg hover:-translate-y-1"
+                        >
+                            <div style={{ color: "var(--color-wine)", marginBottom: "1.5rem" }}>
+                                {principle.icon}
+                            </div>
+                            <h3 style={{
+                                fontFamily: "var(--font-serif)", fontSize: "1.6rem",
+                                color: "var(--color-text-dark)", marginBottom: "1rem", lineHeight: 1.2
+                            }}>
+                                {principle.title}
+                            </h3>
+                            <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.15rem", lineHeight: 1.8 }}>
+                                {principle.body}
+                            </p>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Philosophy Quote — Wine section */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                style={{ backgroundColor: "var(--color-wine)" }}
+                className="py-20 px-6 text-center"
+            >
+                <div className="max-w-4xl mx-auto">
+                    <span style={{ fontFamily: "var(--font-serif)", fontSize: "6rem", color: "var(--color-lilac)", lineHeight: 0.5, display: "block", marginBottom: "1rem", opacity: 0.5 }}>"</span>
+                    <p style={{
+                        fontFamily: "var(--font-serif)", fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
+                        color: "var(--color-cream)", lineHeight: 1.6, fontStyle: "italic",
+                    }}>
+                        If you're a human, you've likely had some type of hardship that has left you feeling 'off', 'triggered', or 'stuck'. My aim is to support your stride until you can return to a state of balance — emotionally and within every day life.
+                    </p>
+                    <p style={{ color: "var(--color-lilac)", fontFamily: "var(--font-sans)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", marginTop: "2rem" }}>
+                        — Isoken (Iso) Ogumbor
+                    </p>
+                </div>
+            </motion.div>
+
+            {/* Session Promise — Cream */}
+            <div className="max-w-4xl mx-auto px-6 py-24 space-y-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="space-y-6"
+                >
+                    <p className="section-label">In Session</p>
+                    <div className="divider" />
+                    <h2 style={{
+                        fontFamily: "var(--font-serif)", fontSize: "clamp(2rem, 3.5vw, 3rem)",
+                        color: "var(--color-text-dark)", lineHeight: 1.15,
+                    }}>
+                        What You Can Expect
+                    </h2>
+                    <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
+                        By understanding the impact of our relationships, attachments, and environments, we are able to truly make sense of the choices we make, and actions we may — or may not — take.
+                    </p>
+                    <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
+                        Within my practice, I'll offer the space needed to uncover and process the root of your struggles and provide you with the skills to stay 'clean' through it all. Let's collaborate to create a plan that helps you deal with, feel through, and heal from the things that you've been through.
+                    </p>
+                </motion.div>
+            </div>
+
+            {/* Therapy Modalities — Cream-dark */}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="max-w-5xl mx-auto px-6 pb-24"
+            >
+                <div style={{
+                    backgroundColor: "var(--color-cream-dark)", borderRadius: "1.5rem",
+                    padding: "3.5rem", border: "1px solid var(--color-lilac)",
+                }}>
+                    <h2 style={{
+                        fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
+                        color: "var(--color-text-dark)", marginBottom: "2rem", lineHeight: 1.2
+                    }}>
+                        Therapeutic Modalities & Training
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {therapyModalities.map((item, i) => (
+                            <div key={i} className="flex gap-3 items-center">
+                                <CheckCircle2 size={18} className="flex-shrink-0" style={{ color: "var(--color-wine)" }} />
+                                <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.15rem" }}>
+                                    {item}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* Education — Cream */}
+            <div className="max-w-4xl mx-auto px-6 pb-24 space-y-6">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="space-y-6"
+                >
+                    <p className="section-label">Education & Training 👩🏾‍🎓</p>
+                    <div className="divider" />
+                    <h2 style={{
+                        fontFamily: "var(--font-serif)", fontSize: "clamp(2rem, 3.5vw, 3rem)",
+                        color: "var(--color-text-dark)", lineHeight: 1.15,
+                    }}>
+                        Academic Background
+                    </h2>
+                    {education.map((item, i) => (
+                        <div key={i} className="flex gap-4 items-start">
+                            <span style={{ color: "var(--color-wine)", fontSize: "1.1rem", lineHeight: 1.5, flexShrink: 0 }}>✦</span>
+                            <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.8 }}>
+                                {item}
+                            </p>
+                        </div>
+                    ))}
+                </motion.div>
+            </div>
+
+            {/* Personal note — light touch */}
+            <div className="max-w-4xl mx-auto px-6 pb-24">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    style={{
+                        backgroundColor: "var(--color-cream-dark)", borderRadius: "1.5rem",
+                        padding: "3rem", border: "1px solid rgba(200,162,200,0.2)",
+                    }}
+                >
+                    <p className="section-label mb-4">Beyond the Office</p>
+                    <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
+                        In my spare time, I enjoy spending time with my family, friends, and my furry angels (aka my dogs). When I am not in therapist-mode, you can catch me binge-watching something completely random — reality TV, true crime documentaries, or Disney shows circa 2010. My go-to forms of self-care are weightlifting and spending time perfecting my skills as a dissectologist 😊.
+                    </p>
+                </motion.div>
+            </div>
+
+            {/* Bottom CTA — Wine */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                style={{ backgroundColor: "var(--color-wine)" }}
+                className="py-24 px-6 text-center"
+            >
+                <PulsingLogo size={60} />
+                <h2 style={{
+                    fontFamily: "var(--font-serif)", fontSize: "clamp(2.2rem, 4vw, 3.5rem)",
+                    color: "var(--color-cream)", maxWidth: "700px",
+                    margin: "0 auto 1.5rem", lineHeight: 1.15
+                }}>
+                    Ready to Begin Your Journey?
+                </h2>
+                <p style={{ color: "rgba(254,251,236,0.65)", fontWeight: 300, maxWidth: "500px", margin: "0 auto 2.5rem", fontSize: "1.05rem", lineHeight: 1.9 }}>
+                    Book a free 15-minute consultation to see if we're the right fit for your healing journey.
+                </p>
+                <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" className="btn-light">
+                    Connect with Me
+                </a>
+            </motion.div>
+        </div>
+    );
+}

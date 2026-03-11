@@ -1,28 +1,38 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Approach from "./components/Approach";
+import AboutMe from "./components/Approach";
 import ServicesOverview from "./components/ServicesOverview";
 import Footer from "./components/Footer";
 import ServicePage from "./pages/ServicePage";
+import ServicesPage from "./pages/ServicesPage";
 import Contact from "./pages/Contact";
+import MyApproach from "./pages/MyApproach";
+import Resources from "./pages/Resources";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-background text-text selection:bg-primary/30 flex flex-col">
+      <ScrollToTop />
+      <div className="min-h-screen bg-[var(--color-cream)] text-[var(--color-text-dark)] selection:bg-[var(--color-wine)]/30 flex flex-col">
         <Navbar />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={
               <>
                 <Hero />
-                <Approach />
+                <AboutMe />
                 <ServicesOverview />
+                <div id="contact">
+                  <Contact />
+                </div>
               </>
             } />
-            <Route path="/services/depression" element={<ServicePage />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/:slug" element={<ServicePage />} />
+            <Route path="/approach" element={<MyApproach />} />
+            <Route path="/blog" element={<Resources />} />
           </Routes>
         </main>
         <Footer />
