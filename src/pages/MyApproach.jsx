@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import PulsingLogo from "../components/PulsingLogo";
+import SpinningLogo from "../components/SpinningLogo";
 import { CheckCircle2, Heart, Brain, Shield, Users, Sparkles, BookOpen } from "lucide-react";
 
 const approachPrinciples = [
@@ -310,7 +310,9 @@ export default function MyApproach() {
                 style={{ backgroundColor: "var(--color-wine)" }}
                 className="py-24 px-6 text-center"
             >
-                <PulsingLogo size={60} />
+                <div className="flex justify-center mb-3 -mt-8">
+                    <SpinningLogo size={180} variant="black" />
+                </div>
                 <h2 style={{
                     fontFamily: "var(--font-serif)", fontSize: "clamp(2.2rem, 4vw, 3.5rem)",
                     color: "var(--color-cream)", maxWidth: "700px",

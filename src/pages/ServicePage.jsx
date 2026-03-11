@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
-import PulsingLogo from "../components/PulsingLogo";
+import SpinningLogo from "../components/SpinningLogo";
 
 const servicesData = {
     depression: {
@@ -381,7 +381,9 @@ export default function ServicePage() {
                 style={{ backgroundColor: "var(--color-wine)" }}
                 className="py-24 px-6 text-center"
             >
-                <PulsingLogo size={60} />
+                <div className="flex justify-center mb-3 -mt-8">
+                    <SpinningLogo size={180} variant="black" />
+                </div>
                 <p style={{
                     fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
                     letterSpacing: "0.2em", textTransform: "uppercase",

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import PulsingLogo from "../components/PulsingLogo";
+import SpinningLogo from "../components/SpinningLogo";
 import { Heart, Brain, Puzzle, ClipboardList, Briefcase, Monitor, ArrowRight } from "lucide-react";
 
 const services = [
@@ -157,7 +157,9 @@ export default function ServicesPage() {
                 style={{ backgroundColor: "var(--color-wine)" }}
                 className="py-24 px-6 text-center"
             >
-                <PulsingLogo size={60} />
+                <div className="flex justify-center mb-3 -mt-8">
+                    <SpinningLogo size={180} variant="black" />
+                </div>
                 <p style={{
                     fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
                     letterSpacing: "0.2em", textTransform: "uppercase",

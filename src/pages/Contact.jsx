@@ -57,72 +57,29 @@ export default function Contact() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="bg-white p-10 md:p-14 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[var(--color-lilac)]/20"
                 >
-                    <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.8rem", color: "var(--color-text-dark)", marginBottom: "2rem" }}>
-                        Request a Consultation
+                    <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.8rem", color: "var(--color-text-dark)", marginBottom: "1rem" }}>
+                        Ready to Connect?
                     </h3>
-                    <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                                <label style={{ fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-text-muted)", fontWeight: 600 }}>First Name</label>
-                                <input type="text" style={{
-                                    width: "100%", background: "transparent",
-                                    borderBottom: "1.5px solid var(--color-lilac)", padding: "0.5rem 0",
-                                    outline: "none", color: "var(--color-text-dark)", fontFamily: "var(--font-sans)", border: "none",
-                                    borderBottomWidth: "1.5px", borderBottomStyle: "solid", borderBottomColor: "var(--color-lilac)",
-                                }} />
-                            </div>
-                            <div className="space-y-2">
-                                <label style={{ fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-text-muted)", fontWeight: 600 }}>Last Name</label>
-                                <input type="text" style={{
-                                    width: "100%", background: "transparent",
-                                    padding: "0.5rem 0", outline: "none", color: "var(--color-text-dark)",
-                                    fontFamily: "var(--font-sans)", border: "none",
-                                    borderBottomWidth: "1.5px", borderBottomStyle: "solid", borderBottomColor: "var(--color-lilac)",
-                                }} />
-                            </div>
-                        </div>
-
-                        <div className="space-y-2">
-                            <label style={{ fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-text-muted)", fontWeight: 600 }}>Email Address</label>
-                            <input type="email" style={{
-                                width: "100%", background: "transparent",
-                                padding: "0.5rem 0", outline: "none", color: "var(--color-text-dark)",
-                                fontFamily: "var(--font-sans)", border: "none",
-                                borderBottomWidth: "1.5px", borderBottomStyle: "solid", borderBottomColor: "var(--color-lilac)",
-                            }} />
-                        </div>
-
-                        <div className="space-y-2">
-                            <label style={{ fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-text-muted)", fontWeight: 600 }}>How can we help you?</label>
-                            <select style={{
-                                width: "100%", background: "transparent",
-                                padding: "0.5rem 0", outline: "none", color: "var(--color-text-dark)",
-                                fontFamily: "var(--font-sans)", fontWeight: 300, border: "none",
-                                borderBottomWidth: "1.5px", borderBottomStyle: "solid", borderBottomColor: "var(--color-lilac)",
-                            }}>
-                                <option value="">Select a service...</option>
-                                <option value="depression">Therapy for Depression</option>
-                                <option value="trauma">Trauma Therapy</option>
-                                <option value="play">Play Therapy</option>
-                                <option value="assessments">Psychodiagnostic Assessments</option>
-                                <option value="other">Other / Not sure</option>
-                            </select>
-                        </div>
-
-                        <div className="space-y-2">
-                            <label style={{ fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-text-muted)", fontWeight: 600 }}>Message (Optional)</label>
-                            <textarea rows="4" style={{
-                                width: "100%", background: "transparent",
-                                padding: "0.5rem 0", outline: "none", color: "var(--color-text-dark)",
-                                fontFamily: "var(--font-sans)", resize: "none", border: "none",
-                                borderBottomWidth: "1.5px", borderBottomStyle: "solid", borderBottomColor: "var(--color-lilac)",
-                            }}></textarea>
-                        </div>
-
-                        <button className="btn-primary w-full" style={{ marginTop: "2rem", padding: "1.1rem" }}>
-                            Send Request
-                        </button>
-                    </form>
+                    <p style={{ color: "var(--color-text-muted)", fontWeight: 300, marginBottom: "2.5rem", lineHeight: 1.8 }}>
+                        To ensure the highest security and privacy of your information, all consultation requests and bookings are handled directly through our secure patient portal.
+                    </p>
+                    
+                    <div style={{
+                        backgroundColor: "rgba(144,70,92,0.03)", border: "1px solid rgba(144,70,92,0.1)",
+                        padding: "2rem", borderRadius: "1rem", textAlign: "center", marginBottom: "2rem"
+                    }}>
+                        <h4 style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: "var(--color-wine)", marginBottom: "0.5rem" }}>Secure Booking Portal</h4>
+                        <p style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", marginBottom: "1.5rem" }}>
+                            Powered by JaneApp — safe, secure, and PIPEDA compliant.
+                        </p>
+                        <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" className="btn-primary w-full inline-block" style={{ padding: "1.1rem" }}>
+                            Access Booking Portal
+                        </a>
+                    </div>
+                    
+                    <p style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", fontStyle: "italic", textAlign: "center", maxWidth: "80%" }}>
+                        If you have questions before booking, please feel free to call us directly at <strong>825-965-9396</strong>.
+                    </p>
                 </motion.div>
 
             </div>

@@ -196,7 +196,7 @@ export default function Hero() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 >
-                    <SpinningLogo size={640} innerScale={1} />
+                    <SpinningLogo size={640} innerScale={1} variant="white" />
                 </motion.div>
             </div>
 

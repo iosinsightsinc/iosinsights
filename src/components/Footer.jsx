@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import SpinningLogo from "./SpinningLogo";
 
 export default function Footer() {
     return (
@@ -10,13 +11,6 @@ export default function Footer() {
                 {/* Brand col */}
                 <div className="md:col-span-5">
                     <div className="flex items-center gap-3 mb-6">
-                        <div style={{
-                            width: "46px", height: "46px", borderRadius: "50%",
-                            backgroundColor: "var(--color-cream)", display: "flex",
-                            alignItems: "center", justifyContent: "center",
-                        }}>
-                            <img src="/logo.png" alt="iOS Insights" style={{ width: "36px", height: "36px", objectFit: "contain" }} />
-                        </div>
                         <div>
                             <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", color: "var(--color-cream)", display: "block", lineHeight: 1.1 }}>
                                 iOS Insights
