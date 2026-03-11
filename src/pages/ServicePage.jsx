@@ -7,7 +7,7 @@ const servicesData = {
     depression: {
         title: "Therapy for Depression",
         subtitle: "in Sherwood Park",
-        image: "/service-depression.png",
+        image: `${import.meta.env.BASE_URL}service-depression.png`,
         heroText: "Treat the root of the insidious monster. Step toward a life you can't wait to wake up to.",
         sections: [
             {
@@ -45,7 +45,7 @@ If you're wondering if you can combat the weight of depression, regain the desir
     trauma: {
         title: "Trauma Therapy",
         subtitle: "Healing from Within",
-        image: "/service-trauma.png",
+        image: `${import.meta.env.BASE_URL}service-trauma.png`,
         heroText: "Healing begins when you are supported to feel safe. We help you process and integrate traumatic experiences.",
         sections: [
             {
@@ -79,7 +79,7 @@ The goal is not just symptom reduction — it's post-traumatic growth. We help y
     play: {
         title: "Play Therapy",
         subtitle: "Supporting Children's Growth",
-        image: "/service-play.png",
+        image: `${import.meta.env.BASE_URL}service-play.png`,
         heroText: "Play is the natural language of children. Through play, children express thoughts and feelings they cannot yet put into words.",
         sections: [
             {
@@ -113,7 +113,7 @@ We also work closely with parents and caregivers, providing guidance on how to s
     assessments: {
         title: "Psychodiagnostic Assessments",
         subtitle: "Clarity Through Evaluation",
-        image: "/service-assessments.png",
+        image: `${import.meta.env.BASE_URL}service-assessments.png`,
         heroText: "Comprehensive psychological assessments that provide clear answers and actionable treatment recommendations.",
         sections: [
             {
@@ -147,7 +147,7 @@ You'll receive a detailed written report with specific, practical recommendation
     vocational: {
         title: "Vocational Support",
         subtitle: "Professional Empowerment",
-        image: "/service-vocational.png",
+        image: `${import.meta.env.BASE_URL}service-vocational.png`,
         heroText: "Psychological support for workplace challenges, career transitions, and vocational rehabilitation.",
         sections: [
             {
@@ -179,7 +179,7 @@ For those dealing with workplace injury or disability, we provide psychological 
     "tele-assessments": {
         title: "Tele-assessments",
         subtitle: "Remote Psychological Care",
-        image: "/service-tele-assessments.png",
+        image: `${import.meta.env.BASE_URL}service-tele-assessments.png`,
         heroText: "Access comprehensive psychological assessments from the comfort of your home through secure, evidence-based protocols.",
         sections: [
             {

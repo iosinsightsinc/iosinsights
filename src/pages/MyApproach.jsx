@@ -84,7 +84,7 @@ export default function MyApproach() {
                             border: "2px solid var(--color-lilac)", opacity: 0.3,
                         }} />
                         <img
-                            src="/iso-profile.png"
+                            src={`${import.meta.env.BASE_URL}iso-profile.png`}
                             alt="Isoken (Iso) Ogumbor"
                             style={{
                                 width: "100%", borderRadius: "1.5rem",

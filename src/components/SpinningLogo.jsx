@@ -21,7 +21,7 @@ export default function SpinningLogo({ size = 120, innerScale = 1, variant = "bl
             flexShrink: 0
         }}>
             <motion.img 
-                src="/logo.png" 
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="iOS Insights" 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
