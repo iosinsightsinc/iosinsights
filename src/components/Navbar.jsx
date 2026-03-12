@@ -141,7 +141,7 @@ function NavLogo() {
         <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.85rem", textDecoration: "none", flexShrink: 0 }}>
             <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.15, gap: "0.2rem" }}>
                 <span style={{
-                    fontFamily: "var(--font-serif)", fontSize: "1.5rem", fontWeight: 500,
+                    fontFamily: "var(--font-sans)", fontSize: "1.5rem", fontWeight: 500,
                     color: "var(--color-cream)", letterSpacing: "0.02em",
                 }}>
                     iOS Insights
@@ -233,7 +233,7 @@ export default function Navbar() {
                         boxShadow: "0 10px 50px rgba(0,0,0,0.4)",
                     }}>
                         <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.6rem", textDecoration: "none" }}>
-                            <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", color: "var(--color-cream)", fontWeight: 500 }}>iOS Insights</span>
+                            <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.1rem", color: "var(--color-cream)", fontWeight: 500 }}>iOS Insights</span>
                         </Link>
                         <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
                             <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" style={{

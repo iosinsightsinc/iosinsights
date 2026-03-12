@@ -12,7 +12,7 @@ export default function Footer() {
                 <div className="md:col-span-5">
                     <div className="flex items-center gap-3 mb-6">
                         <div>
-                            <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", color: "var(--color-cream)", display: "block", lineHeight: 1.1 }}>
+                            <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.4rem", color: "var(--color-cream)", display: "block", lineHeight: 1.1 }}>
                                 iOS Insights
                             </span>
                             <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.55rem", color: "var(--color-lilac)", letterSpacing: "0.15em", textTransform: "uppercase" }}>
