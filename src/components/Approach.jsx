@@ -47,8 +47,8 @@ export default function AboutMe() {
                             backgroundColor: "var(--color-wine)", opacity: 0.15,
                         }} />
                         <img
-                            src={`${import.meta.env.BASE_URL}office-1.jpg`}
-                            alt="iOS Insights Office Space"
+                            src={`${import.meta.env.BASE_URL}iso-profile.png`}
+                            alt="Isoken (Iso) Ogumbor — Registered Clinical Psychologist"
                             style={{
                                 width: "100%", borderRadius: "1.5rem",
                                 objectFit: "cover", aspectRatio: "4/5",

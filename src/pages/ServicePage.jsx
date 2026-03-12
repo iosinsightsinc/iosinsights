@@ -7,7 +7,7 @@ const servicesData = {
     depression: {
         title: "Therapy for Depression",
         subtitle: "in Sherwood Park and Edmonton",
-        image: `${import.meta.env.BASE_URL}service-depression.png`,
+        image: `${import.meta.env.BASE_URL}office-1.jpg`,
         heroText: "Treat the root of the insidious monster. Step toward a life you can't wait to wake up to.",
         sections: [
             {
@@ -45,7 +45,7 @@ If you're wondering if you can combat the weight of depression, regain the desir
     trauma: {
         title: "Trauma Therapy",
         subtitle: "Healing from Within",
-        image: `${import.meta.env.BASE_URL}service-trauma.png`,
+        image: `${import.meta.env.BASE_URL}office-2.jpg`,
         heroText: "Healing begins when you are supported to feel safe. We help you process and integrate traumatic experiences.",
         sections: [
             {
