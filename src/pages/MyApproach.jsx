@@ -115,10 +115,10 @@ export default function MyApproach() {
                             marginBottom: "2rem",
                         }}>
                             My Approach <br />
-                            <em style={{ color: "rgba(254,251,236,0.65)" }}>to Healing & Growth</em>
+                            <em style={{ color: "rgba(252, 246, 242,0.65)" }}>to Healing & Growth</em>
                         </h1>
                         <p style={{
-                            color: "rgba(254,251,236,0.7)", fontWeight: 400,
+                            color: "rgba(252, 246, 242,0.7)", fontWeight: 400,
                             fontSize: "1.2rem", lineHeight: 1.9
                         }}>
                             When we are supported to identify and address the unmet needs that may block us from feeling like 'our best', we gain a greater sense of self.
@@ -155,7 +155,7 @@ export default function MyApproach() {
                             style={{
                                 backgroundColor: "var(--color-cream-dark)",
                                 borderRadius: "1.25rem", padding: "2.5rem",
-                                border: "1px solid rgba(200,162,200,0.2)",
+                                border: "1px solid rgba(217, 187, 186,0.2)",
                                 transition: "transform 0.3s, box-shadow 0.3s",
                             }}
                             className="hover:shadow-lg hover:-translate-y-1"
@@ -217,13 +217,13 @@ export default function MyApproach() {
                         What You Can Expect
                     </h2>
                     <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
-                        My job is to help you gently explore what's been getting in the way — usually unmet needs that haven't been named, or emotional patterns that made sense at some point, but now feel stuck. When we understand the ways our past relationships and environments have shaped how we see ourselves and others, it starts to make sense why we react the way we do — or avoid, shut down, or feel overwhelmed.
+                        My job is to help you gently explore what’s been getting in the way — usually unmet needs that haven’t been named, or emotional patterns that made sense at some point, but now feel stuck. When we understand the ways our past relationships and environments have shaped how we see ourselves and others, it starts to make sense why we react the way we do — or avoid, shut down, or feel overwhelmed.
                     </p>
                     <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
-                        I use a mix of humor, education, and structured approaches like Emotion-Focused Therapy and ACT. I also draw a lot on somatic therapy and attachment theory. One metaphor I often use is to imagine the self like a house. Your earliest attachments — the relationships that helped form your nervous system and sense of self — are like the foundation. If there were cracks in that foundation, it can show up later as issues in the 'upper floors': relationships, emotional regulation, confidence, decision-making, etc.
+                        I use a mix of humor, education, and structured approaches like Emotion-Focused Therapy and ACT. I also draw a lot on somatic therapy and attachment theory. One metaphor I often use is to imagine the self like a house. Your earliest attachments — the relationships that helped form your nervous system and sense of self — are like the foundation. If there were cracks in that foundation, it can show up later as issues in the ‘upper floors’: relationships, emotional regulation, confidence, decision-making, etc.
                     </p>
                     <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
-                        Sometimes we end up spending years trying to patch up those upper floors — but real change happens when we slowly and safely go down into the basement, where those original patterns or beliefs live, and start doing the core repairs. That's where we begin shifting what's called your internal working model — which is just a fancy way of saying the mental blueprint that has been formed in your mind and informs how you expect the world to treat you, and how you believe you're allowed to show up in it.
+                        Sometimes we end up spending years trying to patch up those upper floors — but real change happens when we slowly and safely go down into the basement, where those original patterns or beliefs live, and start doing the core repairs. That’s where we begin shifting what’s called your internal working model — which is just a fancy way of saying the mental blueprint that has been formed in your mind and informs how you expect the world to treat you, and how you believe you’re allowed to show up in it.
                     </p>
                 </motion.div>
             </div>
@@ -294,7 +294,7 @@ export default function MyApproach() {
                     viewport={{ once: true }}
                     style={{
                         backgroundColor: "var(--color-cream-dark)", borderRadius: "1.5rem",
-                        padding: "3rem", border: "1px solid rgba(200,162,200,0.2)",
+                        padding: "3rem", border: "1px solid rgba(217, 187, 186,0.2)",
                     }}
                 >
                     <p className="section-label mb-4">Beyond the Office</p>
@@ -323,7 +323,7 @@ export default function MyApproach() {
                 }}>
                     Ready to Begin Your Journey?
                 </h2>
-                <p style={{ color: "rgba(254,251,236,0.65)", fontWeight: 300, maxWidth: "500px", margin: "0 auto 2.5rem", fontSize: "1.05rem", lineHeight: 1.9 }}>
+                <p style={{ color: "rgba(252, 246, 242,0.65)", fontWeight: 300, maxWidth: "500px", margin: "0 auto 2.5rem", fontSize: "1.05rem", lineHeight: 1.9 }}>
                     Book a free 15-minute consultation to see if we're the right fit for your healing journey.
                 </p>
                 <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" className="btn-light">

@@ -7,7 +7,7 @@ const servicesData = {
     depression: {
         title: "Therapy for Depression",
         subtitle: "in Sherwood Park and Edmonton",
-        image: `${import.meta.env.BASE_URL}office-1.jpg`,
+        image: `${import.meta.env.BASE_URL}office-3.jpg`,
         heroText: "Treat the root of the insidious monster. Step toward a life you can't wait to wake up to.",
         sections: [
             {
@@ -39,13 +39,104 @@ If you're wondering if you can combat the weight of depression, regain the desir
             "Identify key individuals and relationships shaping your psychology.",
             "Create a timeline of major traumas and stressors — uncovering your deeply rooted triggers.",
             "Develop strategies for immediate symptom relief and long-term healing.",
-            "Access innovative modalities: Internal Family Systems, flash therapy, and somatic therapy.",
+            "Access innovative modalities: Internal Family Systems, Flash therapy, and Somatic therapy.",
+        ],
+    },
+    anxiety: {
+        title: "Therapy for Anxiety",
+        subtitle: "in Sherwood Park and Edmonton",
+        image: `${import.meta.env.BASE_URL}service-anxiety.png`,
+        heroText: "Quiet the noise and find your center. We help you build a sense of safety and calm from within.",
+        sections: [
+            {
+                heading: "Understanding the Weight of Anxiety",
+                body: `Anxiety often feels like an internal alarm system that won't shut off. Whether it's racing thoughts, chronic worry, perfectionism, or physical panic, anxiety can exhaust your nervous system and limit your ability to be present in your own life.
+
+It's natural to try to control or avoid the things that make us anxious, but this often makes the anxiety shrink our world even further. You are fundamentally wired for safety, and together we can unravel the fear.`,
+            },
+            {
+                heading: "Moving from Panic to Peace",
+                body: `We don't just talk about your worries; we actively work to rewire how your nervous system responds to stress. By understanding the root triggers of your anxiety, we can help your body relearn how to feel safe in the present moment.
+
+Life shouldn't be a constant state of bracing for impact. Relief is possible.`,
+            },
+        ],
+        howItWorks: [
+            "Explore the origins of your anxiety and map your nervous system's specific responses.",
+            "Learn immediate somatic tools to regulate physical symptoms of panic or stress.",
+            "Identify and reframe the deep-seated beliefs driving chronic worry.",
+            "Gradually and safely approach avoided situations to build genuine confidence.",
+            "Develop long-term strategies for emotional resilience and grounding.",
+        ],
+    },
+    attachment: {
+        title: "Attachment Therapy",
+        subtitle: "Helping you build the relationship you want with yourself and those who matter",
+        image: `${import.meta.env.BASE_URL}service-attachment.png`,
+        heroText: "People heal in safe, attuned relationships. Discover the foundation of your attachment style and start thriving.",
+        sections: [
+            {
+                heading: "The Foundation of the Self",
+                body: `I believe that people heal in safe, attuned relationships. My approach to therapy integrates evidence-based practices like attachment theory, somatic awareness, Internal Family Systems, Emotion-Focused Therapy and ACT. 
+
+I often use the metaphor of the self as a house — where early attachments form the foundation. When that foundation has cracks, it can show up later in the way we regulate emotions, manage relationships, and see ourselves.`,
+            },
+            {
+                heading: "Doing the Core Repairs",
+                body: `In our work together, we'll gently explore those deeper patterns, often working in-session to build skills, regulate emotions, and shift long-standing beliefs held in both mind and body. 
+
+Treatment is always tailored to your needs, and we'll track your progress through a combination of your own insights, relational shifts, and structured tools. My goal is to support you in moving from surviving to thriving.`,
+            },
+        ],
+        howItWorks: [
+            "Explore your early foundational relationships to understand your attachment style.",
+            "Identify recurring relational patterns that no longer serve you.",
+            "Work in-session to build emotion regulation and communication skills.",
+            "Shift deep-seated beliefs through somatic and Internal Family Systems work.",
+            "Develop secure, attuned relationships with yourself and those who matter.",
+        ],
+    },
+    sandtray: {
+        title: "Sandtray Therapy",
+        subtitle: "in Sherwood Park and Edmonton",
+        image: `${import.meta.env.BASE_URL}service-sandtray.png`,
+        heroText: "Process what words cannot capture. Sandtray therapy offers a profound way to map your inner world.",
+        sections: [
+            {
+                heading: "When Words Aren't Enough",
+                body: `Sandtray therapy is a powerful, hands-on tool that helps your body communicate deep emotions and past experiences that are too difficult to put into words. Sometimes, trauma or intense feelings are stored in parts of the brain that don't easily access language.
+
+By building scenes in a tray of sand using miniature figures, you can physically map out and explore your inner world in a safe, contained space.`,
+            },
+            {
+                heading: "Externalizing the Internal",
+                body: `This modality allows you to take what feels overwhelming inside and place it on the outside. By looking at your experiences from a distance, rather than feeling trapped inside them, it becomes much safer to process difficult emotions and explore your own story.
+
+It is a deeply somatic (body-based) process that engages the whole brain in healing, allowing your body to communicate feelings and traumas that your mind might not yet have the words to name.`,
+            },
+            {
+                heading: "Issues Sandtray Therapy Can Help With",
+                body: `Because sandtray therapy bypasses the need for complex language, it is incredibly effective for addressing deeply rooted challenges, including:
+• Processing childhood or acute trauma
+• Managing severe anxiety and panic
+• Processing grief and complex loss
+• Regulating overwhelming emotions and emotional dysregulation
+• Working through life transitions or feelings of feeling "stuck"
+• Improving self-esteem and exploring identity`,
+            },
+        ],
+        howItWorks: [
+            "Create physical representations of your inner emotional landscape using sand and miniatures.",
+            "Safely externalize and examine complex or overwhelming feelings from a distance.",
+            "Process pre-verbal traumas that are held in the body rather than the narrative mind.",
+            "Experience deep, embodied neurobiological shifts without needing to talk through every detail.",
+            "Integrate fragmented parts of the self into a cohesive, healed whole.",
         ],
     },
     trauma: {
         title: "Trauma Therapy",
         subtitle: "Healing from Within",
-        image: `${import.meta.env.BASE_URL}office-2.jpg`,
+        image: `${import.meta.env.BASE_URL}service-trauma.png`,
         heroText: "Healing begins when you are supported to feel safe. We help you process and integrate traumatic experiences.",
         sections: [
             {
@@ -111,9 +202,9 @@ We also work closely with parents and caregivers, providing guidance on how to s
         ],
     },
     assessments: {
-        title: "Psychodiagnostic Assessments",
-        subtitle: "Clarity Through Evaluation",
-        image: `${import.meta.env.BASE_URL}service-assessments.png`,
+        title: "Psychological Assessments",
+        subtitle: "Clarity for Your Path Forward",
+        image: `${import.meta.env.BASE_URL}office-4.jpg`,
         heroText: "Comprehensive psychological assessments that provide clear answers and actionable treatment recommendations.",
         sections: [
             {
@@ -227,14 +318,14 @@ export default function ServicePage() {
     }
 
     return (
-        <div style={{ backgroundColor: "var(--color-cream)" }} className="w-full pt-28">
+        <div style={{ backgroundColor: "var(--color-cream)" }} className="w-full pt-20">
 
             {/* Hero Banner — Wine */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundColor: "var(--color-wine)", padding: "6rem 1.5rem" }}
+                style={{ backgroundColor: "var(--color-wine)", padding: "4rem 1.5rem" }}
                 className="text-center"
             >
                 <p style={{
@@ -253,12 +344,12 @@ export default function ServicePage() {
                 </h1>
                 <p style={{
                     fontFamily: "var(--font-serif)", fontSize: "1.3rem", fontStyle: "italic",
-                    color: "rgba(254,251,236,0.5)", marginBottom: "2rem",
+                    color: "rgba(252, 246, 242,0.5)", marginBottom: "2rem",
                 }}>
                     {service.subtitle}
                 </p>
                 <p style={{
-                    color: "rgba(254,251,236,0.7)", fontWeight: 400,
+                    color: "rgba(252, 246, 242,0.7)", fontWeight: 400,
                     maxWidth: "560px", margin: "0 auto 3rem",
                     fontSize: "1.2rem", lineHeight: 1.9
                 }}>
@@ -279,7 +370,7 @@ export default function ServicePage() {
             >
                 <div style={{
                     borderRadius: "1.5rem", overflow: "hidden",
-                    boxShadow: "0 20px 60px rgba(44,27,44,0.15)",
+                    boxShadow: "0 20px 60px rgba(42, 23, 25,0.15)",
                 }}>
                     <img
                         src={service.image}
@@ -358,13 +449,13 @@ export default function ServicePage() {
                         <Link key={s} to={`/services/${s}`}
                             style={{
                                 padding: "0.6rem 1.4rem", borderRadius: "9999px",
-                                backgroundColor: "rgba(144,70,92,0.08)", color: "var(--color-wine)",
+                                backgroundColor: "rgba(160, 89, 98,0.08)", color: "var(--color-wine)",
                                 fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 600,
                                 letterSpacing: "0.1em", textTransform: "uppercase",
                                 textDecoration: "none", transition: "background-color 0.2s",
                             }}
-                            onMouseOver={e => e.currentTarget.style.backgroundColor = "rgba(144,70,92,0.15)"}
-                            onMouseOut={e => e.currentTarget.style.backgroundColor = "rgba(144,70,92,0.08)"}
+                            onMouseOver={e => e.currentTarget.style.backgroundColor = "rgba(160, 89, 98,0.15)"}
+                            onMouseOut={e => e.currentTarget.style.backgroundColor = "rgba(160, 89, 98,0.08)"}
                         >
                             {data.title}
                         </Link>
@@ -398,7 +489,7 @@ export default function ServicePage() {
                 }}>
                     Ready to Begin?
                 </h2>
-                <p style={{ color: "rgba(254,251,236,0.7)", fontWeight: 400, maxWidth: "560px", margin: "0 auto 2.5rem", fontSize: "1.2rem", lineHeight: 1.9 }}>
+                <p style={{ color: "rgba(252, 246, 242,0.7)", fontWeight: 400, maxWidth: "560px", margin: "0 auto 2.5rem", fontSize: "1.2rem", lineHeight: 1.9 }}>
                     Book a free 15-minute consultation to see if we're the right match for your unique journey toward healing.
                 </p>
                 <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" className="btn-light">

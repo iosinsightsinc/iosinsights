@@ -53,7 +53,7 @@ export default function AboutMe() {
                                 width: "100%", borderRadius: "1.5rem",
                                 objectFit: "cover", aspectRatio: "4/5",
                                 position: "relative", zIndex: 1,
-                                boxShadow: "0 20px 60px rgba(44,27,44,0.15)",
+                                boxShadow: "0 20px 60px rgba(42, 23, 25,0.15)",
                             }}
                         />
                     </motion.div>
@@ -79,7 +79,7 @@ export default function AboutMe() {
                             Registered Clinical Psychologist
                         </p>
                         <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
-                            As a BIPOC and neurodivergent psychologist, I am dedicated to helping others reach a place where they feel like they can <strong style={{ color: "var(--color-text-dark)" }}>chill</strong> — aka "choose how I live life"™ — instead of feeling like life has been chosen for them.
+                            My job is to help you gently explore what’s been getting in the way — usually unmet needs that haven’t been named, or emotional patterns that made sense at some point, but now feel stuck. When we understand the ways our past relationships and environments have shaped how we see ourselves and others, it starts to make sense why we react the way we do — or avoid, shut down, or feel overwhelmed.
                         </p>
                         <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
                             I have over 7 years of experience offering therapy to adults, teens, and children in need. I hold additional certifications in trauma-informed expressive arts, attachment-focused therapy, flash therapy, emotion-focused individual & family therapy, and play therapy.
@@ -103,7 +103,7 @@ export default function AboutMe() {
                         <div className="flex flex-wrap gap-2 pt-2">
                             {specialties.map((s, i) => (
                                 <span key={i} style={{
-                                    backgroundColor: "rgba(144,70,92,0.08)", color: "var(--color-wine)",
+                                    backgroundColor: "rgba(160, 89, 98,0.08)", color: "var(--color-wine)",
                                     fontSize: "0.7rem", letterSpacing: "0.1em", fontWeight: 600,
                                     padding: "0.4rem 1rem", borderRadius: "9999px", textTransform: "uppercase",
                                 }}>

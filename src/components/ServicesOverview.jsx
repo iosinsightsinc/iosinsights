@@ -10,6 +10,18 @@ const services = [
         link: "/services/depression"
     },
     {
+        category: "Individual Therapy",
+        title: "Therapy for Anxiety",
+        excerpt: "Quiet the noise and find your center. Regain a sense of safety and calm.",
+        link: "/services/anxiety"
+    },
+    {
+        category: "Therapy",
+        title: "Attachment Therapy",
+        excerpt: "Build the relationships you want. Shift long-standing beliefs held in mind and body.",
+        link: "/services/attachment"
+    },
+    {
         category: "Therapy",
         title: "Trauma Therapy",
         excerpt: "Safely process past experiences and regulate your nervous system to restore inner peace.",
@@ -20,6 +32,12 @@ const services = [
         title: "Play Therapy",
         excerpt: "Children communicate through play. We provide a safe space for them to express complex emotions.",
         link: "/services/play",
+    },
+    {
+        category: "Therapy",
+        title: "Sandtray Therapy",
+        excerpt: "Process what words cannot capture. A hands-on tool to safely map and explore your inner world.",
+        link: "/services/sandtray",
     },
     {
         category: "Assessments",
@@ -77,20 +95,20 @@ export default function ServicesOverview() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="flex flex-col justify-end"
                     >
-                        <p style={{ color: "rgba(254,251,236,0.7)", fontWeight: 300, lineHeight: 1.9, fontSize: "1.2rem" }}>
+                        <p style={{ color: "rgba(252, 246, 242,0.7)", fontWeight: 300, lineHeight: 1.9, fontSize: "1.2rem" }}>
                             Each of our therapy streams is deep, empathetic, and tailored specifically to your unique mental landscape. We don't treat symptoms — we unravel causes.
                         </p>
                         <Link to="/services"
                             style={{
                                 display: "inline-block", alignSelf: "flex-start", marginTop: "2rem",
                                 padding: "0.9rem 2.5rem", borderRadius: "9999px",
-                                border: "1.5px solid rgba(254,251,236,0.35)", color: "var(--color-cream)",
+                                border: "1.5px solid rgba(252, 246, 242,0.35)", color: "var(--color-cream)",
                                 fontFamily: "var(--font-sans)", fontSize: "0.75rem", fontWeight: 600,
                                 letterSpacing: "0.15em", textTransform: "uppercase",
                                 transition: "all 0.3s ease", textDecoration: "none",
                             }}
                             onMouseOver={e => { e.currentTarget.style.backgroundColor = "var(--color-cream)"; e.currentTarget.style.color = "var(--color-lilac-dark)"; e.currentTarget.style.borderColor = "var(--color-cream)"; }}
-                            onMouseOut={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = "var(--color-cream)"; e.currentTarget.style.borderColor = "rgba(254,251,236,0.35)"; }}
+                            onMouseOut={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = "var(--color-cream)"; e.currentTarget.style.borderColor = "rgba(252, 246, 242,0.35)"; }}
                         >
                             View All Services
                         </Link>
@@ -98,7 +116,7 @@ export default function ServicesOverview() {
                 </div>
 
                 {/* Service cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {services.map((service, i) => (
                         <motion.div
                             key={i}

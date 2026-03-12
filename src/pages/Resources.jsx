@@ -105,10 +105,10 @@ export default function Resources() {
                     maxWidth: "800px", margin: "0 auto 2rem",
                 }}>
                     Tools to Support <br />
-                    <em style={{ color: "rgba(254,251,236,0.65)" }}>Your Journey</em>
+                    <em style={{ color: "rgba(252, 246, 242,0.65)" }}>Your Journey</em>
                 </h1>
                 <p style={{
-                    color: "rgba(254,251,236,0.7)", fontWeight: 400,
+                    color: "rgba(252, 246, 242,0.7)", fontWeight: 400,
                     maxWidth: "600px", margin: "0 auto",
                     fontSize: "1.2rem", lineHeight: 1.9
                 }}>
@@ -152,14 +152,14 @@ export default function Resources() {
                             }}>
                                 {sortedApp.tagline}
                             </p>
-                            <p style={{ fontSize: "1.2rem", lineHeight: 1.9, fontWeight: 400, color: "rgba(254,251,236,0.85)", marginBottom: "2rem" }}>
+                            <p style={{ fontSize: "1.2rem", lineHeight: 1.9, fontWeight: 400, color: "rgba(252, 246, 242,0.85)", marginBottom: "2rem" }}>
                                 {sortedApp.description}
                             </p>
                             <div className="space-y-3 mb-8">
                                 {sortedApp.highlights.map((item, i) => (
                                     <div key={i} className="flex items-center gap-3">
                                         <Star size={16} style={{ color: "var(--color-lilac)", flexShrink: 0 }} />
-                                        <span style={{ fontSize: "1.1rem", fontWeight: 400, color: "rgba(254,251,236,0.8)" }}>{item}</span>
+                                        <span style={{ fontSize: "1.1rem", fontWeight: 400, color: "rgba(252, 246, 242,0.8)" }}>{item}</span>
                                     </div>
                                 ))}
                             </div>
@@ -175,12 +175,12 @@ export default function Resources() {
                         </div>
                         <div className="flex flex-col justify-between">
                             <div style={{
-                                backgroundColor: "rgba(254,251,236,0.08)", borderRadius: "1.25rem",
-                                padding: "2.5rem", border: "1px solid rgba(254,251,236,0.1)",
+                                backgroundColor: "rgba(252, 246, 242,0.08)", borderRadius: "1.25rem",
+                                padding: "2.5rem", border: "1px solid rgba(252, 246, 242,0.1)",
                                 marginBottom: "2rem",
                             }}>
                                 <span style={{ fontFamily: "var(--font-serif)", fontSize: "3rem", color: "var(--color-lilac)", lineHeight: 0.5, display: "block", marginBottom: "1rem", opacity: 0.5 }}>"</span>
-                                <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.35rem", lineHeight: 1.7, fontStyle: "italic", color: "rgba(254,251,236,0.85)" }}>
+                                <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.35rem", lineHeight: 1.7, fontStyle: "italic", color: "rgba(252, 246, 242,0.85)" }}>
                                     {sortedApp.testimonial}
                                 </p>
                                 <p style={{ color: "var(--color-lilac)", fontFamily: "var(--font-sans)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", marginTop: "1.5rem" }}>
@@ -195,7 +195,7 @@ export default function Resources() {
                                     {sortedApp.benefits.map((b, i) => (
                                         <span key={i} style={{
                                             padding: "0.4rem 1rem", borderRadius: "9999px",
-                                            backgroundColor: "rgba(254,251,236,0.1)", color: "var(--color-cream)",
+                                            backgroundColor: "rgba(252, 246, 242,0.1)", color: "var(--color-cream)",
                                             fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 500,
                                         }}>
                                             {b}
@@ -236,7 +236,7 @@ export default function Resources() {
                                 transition={{ duration: 0.7, delay: i * 0.08 }}
                                 style={{
                                     backgroundColor: "var(--color-cream)", borderRadius: "1.5rem",
-                                    padding: "2.5rem", border: "1px solid rgba(200,162,200,0.15)",
+                                    padding: "2.5rem", border: "1px solid rgba(217, 187, 186,0.15)",
                                     transition: "transform 0.3s, box-shadow 0.3s",
                                     display: "flex", flexDirection: "column", height: "100%",
                                 }}
@@ -245,7 +245,7 @@ export default function Resources() {
                                 <div style={{
                                     color: "var(--color-wine)", marginBottom: "1.5rem",
                                     width: "50px", height: "50px", borderRadius: "50%",
-                                    backgroundColor: "rgba(144,70,92,0.08)",
+                                    backgroundColor: "rgba(160, 89, 98,0.08)",
                                     display: "flex", alignItems: "center", justifyContent: "center",
                                 }}>
                                     {app.icon}
@@ -266,7 +266,7 @@ export default function Resources() {
                                     {app.tags.map(tag => (
                                         <span key={tag} style={{
                                             padding: "0.3rem 0.8rem", borderRadius: "9999px",
-                                            backgroundColor: "rgba(144,70,92,0.06)", color: "var(--color-wine)",
+                                            backgroundColor: "rgba(160, 89, 98,0.06)", color: "var(--color-wine)",
                                             fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
                                             letterSpacing: "0.08em", textTransform: "uppercase",
                                         }}>
@@ -353,12 +353,12 @@ export default function Resources() {
                     margin: "0 auto 1rem", lineHeight: 1.15
                 }}>
                     Apps Are a Great Start — <br />
-                    <em style={{ color: "rgba(254,251,236,0.65)" }}>Therapy Goes Deeper</em>
+                    <em style={{ color: "rgba(252, 246, 242,0.65)" }}>Therapy Goes Deeper</em>
                 </h2>
-                <p style={{ color: "rgba(254,251,236,0.7)", fontWeight: 400, maxWidth: "560px", margin: "0 auto 1rem", fontSize: "1.2rem", lineHeight: 1.9 }}>
+                <p style={{ color: "rgba(252, 246, 242,0.7)", fontWeight: 400, maxWidth: "560px", margin: "0 auto 1rem", fontSize: "1.2rem", lineHeight: 1.9 }}>
                     These apps are wonderful tools for self-support, but they work best alongside professional care. If you're ready for deeper work, we're here.
                 </p>
-                <p style={{ color: "rgba(254,251,236,0.5)", fontStyle: "italic", fontSize: "0.9rem", marginBottom: "2.5rem" }}>
+                <p style={{ color: "rgba(252, 246, 242,0.5)", fontStyle: "italic", fontSize: "0.9rem", marginBottom: "2.5rem" }}>
                     *Note: These recommendations are for educational purposes. They are not a substitute for professional therapy.*
                 </p>
                 <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" className="btn-light">

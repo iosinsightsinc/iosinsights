@@ -36,7 +36,7 @@ export default function Contact() {
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-4">
                                 <div style={{
-                                    backgroundColor: "rgba(144,70,92,0.1)", color: "var(--color-wine)",
+                                    backgroundColor: "rgba(160, 89, 98,0.1)", color: "var(--color-wine)",
                                     padding: "1rem", borderRadius: "50%",
                                 }}>
                                     {item.icon}
@@ -65,7 +65,7 @@ export default function Contact() {
                     </p>
                     
                     <div style={{
-                        backgroundColor: "rgba(144,70,92,0.03)", border: "1px solid rgba(144,70,92,0.1)",
+                        backgroundColor: "rgba(160, 89, 98,0.03)", border: "1px solid rgba(160, 89, 98,0.1)",
                         padding: "2rem", borderRadius: "1rem", textAlign: "center", marginBottom: "2rem"
                     }}>
                         <h4 style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: "var(--color-wine)", marginBottom: "0.5rem" }}>Secure Booking Portal</h4>

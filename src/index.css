@@ -16,28 +16,16 @@
 
 @layer base {
   :root {
-    /* DEFAULT (Wine/Lilac Theme) */
-    --theme-cream: #FEFBEC;
-    --theme-cream-dark: #F0E8D8;
-    --theme-wine: #90465C;
-    --theme-wine-dark: #6E3347;
-    --theme-lilac: #C8A2C8;
-    --theme-lilac-dark: #2A1F2D;
-    --theme-navbar: #1E0F1E;
-    --theme-text-dark: #2C1B2C;
-    --theme-text-muted: #4A3545;
-  }
-
-  [data-theme="terracotta"] {
-    /* ALTERNATE: Terracotta Theme */
-    --theme-cream: #F7E9DE;
-    --theme-cream-dark: #EADCD1;
-    --theme-wine: #A85A5E;  /* Muted Rose/Terracotta midplate */
-    --theme-wine-dark: #622625; /* Deep Rust Brown */
-    --theme-lilac: #B4AEBA;  /* Slate/Sage Blue Grey */
-    --theme-lilac-dark: #543B52; /* Deep Plum Black */
-    --theme-navbar: #1E0F1E;
-    --theme-text-dark: #2C1B2C;
+    /* DEFAULT (New Brand Palette with Higher Contrast) */
+    --theme-cream: #FCF6F2; /* Kept very light and warm for maximum contrast */
+    --theme-cream-dark: #EDE0D9; /* A bit richer for alternating sections */
+    --theme-wine: #A05962; /* Darker, richer rosewood (Top Left / Bottom Left mix) for buttons/accents to pop */
+    --theme-wine-dark: #82434A; /* Even deeper for hover states */
+    --theme-lilac: #D9BBBA; /* A slightly deeper blush (Top Right) so it doesn't wash out */
+    --theme-lilac-dark: #5C3838; /* A darker version of the cocoa */
+    --theme-navbar: #5C3838; /* Deepened the bottom-right cocoa for a strong, readable navbar */
+    --theme-text-dark: #2A1719; /* Almost black but warm, excellent for headings */
+    --theme-text-muted: #543436; /* Darkened the muted text significantly so paragraphs are easy to read */
   }
 }
 
@@ -106,7 +94,7 @@
   .btn-primary:hover {
     background-color: var(--color-wine-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -8px rgba(144, 70, 92, 0.45);
+    box-shadow: 0 10px 25px -8px rgba(160, 89, 98, 0.45);
   }
 
   /* ── Light button: cream bg + wine text (used on dark backgrounds) ── */
@@ -130,7 +118,7 @@
   .btn-light:hover {
     background-color: var(--color-white);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -8px rgba(254, 251, 236, 0.3);
+    box-shadow: 0 10px 25px -8px rgba(252, 246, 242, 0.3);
   }
 
   /* ── Outline button ── */
@@ -155,7 +143,7 @@
     background-color: var(--color-wine);
     color: var(--color-cream);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px -10px rgba(144, 70, 92, 0.35);
+    box-shadow: 0 10px 20px -10px rgba(160, 89, 98, 0.35);
   }
 
   .section-label {

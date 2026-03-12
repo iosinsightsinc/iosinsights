@@ -30,7 +30,7 @@ const services = [
         icon: <Box size={32} strokeWidth={1.5} />,
         title: "Sandtray Therapy",
         tagline: "Process what words cannot capture.",
-        excerpt: "A powerful somatic tool that aids with the body communicating felt emotions and traumas the mind cannot yet name. It helps with embodied processing and supports narrative exploration.",
+        excerpt: "A powerful, hands-on tool that helps your body communicate emotions and past experiences that are too difficult to put into words. It allows you to physically map out and safely explore your inner world.",
     },
     {
         slug: "trauma",
@@ -71,14 +71,14 @@ const services = [
 
 export default function ServicesPage() {
     return (
-        <div style={{ backgroundColor: "var(--color-cream)" }} className="w-full pt-28">
+        <div style={{ backgroundColor: "var(--color-cream)", minHeight: "100vh" }} className="w-full pt-24 pb-20">
 
             {/* Hero Banner — Wine */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundColor: "var(--color-wine)", padding: "6rem 1.5rem" }}
+                style={{ backgroundColor: "var(--color-wine)", padding: "4rem 1.5rem" }}
                 className="text-center"
             >
                 <p style={{
@@ -94,10 +94,10 @@ export default function ServicesPage() {
                     maxWidth: "800px", margin: "0 auto 2rem",
                 }}>
                     Specialized Therapy <br />
-                    <em style={{ color: "rgba(254,251,236,0.65)" }}>for Every Thread of You</em>
+                    <em style={{ color: "rgba(252, 246, 242,0.65)" }}>for Every Thread of You</em>
                 </h1>
                 <p style={{
-                    color: "rgba(254,251,236,0.7)", fontWeight: 400,
+                    color: "rgba(252, 246, 242,0.7)", fontWeight: 400,
                     maxWidth: "560px", margin: "0 auto",
                     fontSize: "1.2rem", lineHeight: 1.9
                 }}>
@@ -121,18 +121,18 @@ export default function ServicesPage() {
                                 style={{
                                     display: "flex", flexDirection: "column", height: "100%",
                                     backgroundColor: "var(--color-cream-dark)", borderRadius: "1.5rem",
-                                    padding: "2.5rem", border: "1px solid rgba(200,162,200,0.15)",
+                                    padding: "2.5rem", border: "1px solid rgba(217, 187, 186,0.15)",
                                     transition: "transform 0.3s, box-shadow 0.3s, border-color 0.3s",
                                     textDecoration: "none",
                                 }}
                                 className="hover:shadow-xl hover:-translate-y-2"
                                 onMouseOver={e => e.currentTarget.style.borderColor = "var(--color-wine)"}
-                                onMouseOut={e => e.currentTarget.style.borderColor = "rgba(200,162,200,0.15)"}
+                                onMouseOut={e => e.currentTarget.style.borderColor = "rgba(217, 187, 186,0.15)"}
                             >
                                 <div style={{
                                     color: "var(--color-wine)", marginBottom: "1.5rem",
                                     width: "60px", height: "60px", borderRadius: "50%",
-                                    backgroundColor: "rgba(144,70,92,0.08)",
+                                    backgroundColor: "rgba(160, 89, 98,0.08)",
                                     display: "flex", alignItems: "center", justifyContent: "center",
                                 }}>
                                     {service.icon}
@@ -195,7 +195,7 @@ export default function ServicesPage() {
                 }}>
                     Not Sure Where to Start?
                 </h2>
-                <p style={{ color: "rgba(254,251,236,0.7)", fontWeight: 400, maxWidth: "500px", margin: "0 auto 2.5rem", fontSize: "1.2rem", lineHeight: 1.9 }}>
+                <p style={{ color: "rgba(252, 246, 242,0.7)", fontWeight: 400, maxWidth: "500px", margin: "0 auto 2.5rem", fontSize: "1.2rem", lineHeight: 1.9 }}>
                     Connect with me for a free 15-minute telephone consultation and we'll help you find the right path forward.
                 </p>
                 <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" className="btn-light">
