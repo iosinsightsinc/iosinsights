@@ -216,11 +216,14 @@ export default function MyApproach() {
                     }}>
                         What You Can Expect
                     </h2>
-                    <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
-                        By understanding the impact of our relationships, attachments, and environments, we are able to truly make sense of the choices we make, and actions we may — or may not — take.
+                    <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
+                        My job is to help you gently explore what's been getting in the way — usually unmet needs that haven't been named, or emotional patterns that made sense at some point, but now feel stuck. When we understand the ways our past relationships and environments have shaped how we see ourselves and others, it starts to make sense why we react the way we do — or avoid, shut down, or feel overwhelmed.
+                    </p>
+                    <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
+                        I use a mix of humor, education, and structured approaches like Emotion-Focused Therapy and ACT. I also draw a lot on somatic therapy and attachment theory. One metaphor I often use is to imagine the self like a house. Your earliest attachments — the relationships that helped form your nervous system and sense of self — are like the foundation. If there were cracks in that foundation, it can show up later as issues in the 'upper floors': relationships, emotional regulation, confidence, decision-making, etc.
                     </p>
                     <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
-                        Within my practice, I'll offer the space needed to uncover and process the root of your struggles and provide you with the skills to stay 'clean' through it all. Let's collaborate to create a plan that helps you deal with, feel through, and heal from the things that you've been through.
+                        Sometimes we end up spending years trying to patch up those upper floors — but real change happens when we slowly and safely go down into the basement, where those original patterns or beliefs live, and start doing the core repairs. That's where we begin shifting what's called your internal working model — which is just a fancy way of saying the mental blueprint that has been formed in your mind and informs how you expect the world to treat you, and how you believe you're allowed to show up in it.
                     </p>
                 </motion.div>
             </div>

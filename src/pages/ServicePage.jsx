@@ -6,7 +6,7 @@ import SpinningLogo from "../components/SpinningLogo";
 const servicesData = {
     depression: {
         title: "Therapy for Depression",
-        subtitle: "in Sherwood Park",
+        subtitle: "in Sherwood Park and Edmonton",
         image: `${import.meta.env.BASE_URL}service-depression.png`,
         heroText: "Treat the root of the insidious monster. Step toward a life you can't wait to wake up to.",
         sections: [
@@ -39,7 +39,7 @@ If you're wondering if you can combat the weight of depression, regain the desir
             "Identify key individuals and relationships shaping your psychology.",
             "Create a timeline of major traumas and stressors — uncovering your deeply rooted triggers.",
             "Develop strategies for immediate symptom relief and long-term healing.",
-            "Access innovative modalities: EMDR, somatic therapy, and mind-body integration.",
+            "Access innovative modalities: Internal Family Systems, flash therapy, and somatic therapy.",
         ],
     },
     trauma: {
@@ -70,7 +70,7 @@ The goal is not just symptom reduction — it's post-traumatic growth. We help y
         howItWorks: [
             "Establish safety and stabilization as the foundation of treatment.",
             "Comprehensive trauma assessment to map your unique experience.",
-            "Process traumatic memories using evidence-based techniques (TF-CBT, EMDR, Somatic).",
+            "Process traumatic memories using evidence-based techniques (TF-CBT, Somatic, Emotion-Focused).",
             "Address attachment wounds and relational patterns.",
             "Build emotional regulation skills and body awareness.",
             "Support post-traumatic growth and meaningful life re-engagement.",

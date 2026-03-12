@@ -1,20 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Balanced Lilac / Fine Wine / Off-White Palette ── */
-  --color-cream: #FEFBEC;           /* Warm off-white for light sections */
-  --color-cream-dark: #F0E8D8;      /* Warmer tinted cream for cards */
-  --color-wine: #90465C;            /* Rich fine wine — primary accent */
-  --color-wine-dark: #6E3347;       /* Deeper wine for hover / emphasis */
-  --color-lilac: #C8A2C8;           /* Soft lilac highlight */
-  --color-lilac-dark: #2A1F2D;      /* Very deep plum-charcoal — distinct from wine */
-  --color-navbar: #1E0F1E;          /* Ultra-deep plum-black navbar */
-  --color-text-dark: #2C1B2C;       /* Primary dark text on light bg */
-  --color-text-muted: #4A3545;      /* Secondary text — darker for readability */
+  /* ── CSS Variable Mapping (Used in Tailwind & React) ── */
+  --color-cream: var(--theme-cream);
+  --color-cream-dark: var(--theme-cream-dark);
+  --color-wine: var(--theme-wine);
+  --color-wine-dark: var(--theme-wine-dark);
+  --color-lilac: var(--theme-lilac);
+  --color-lilac-dark: var(--theme-lilac-dark);
+  --color-navbar: var(--theme-navbar);
+  --color-text-dark: var(--theme-text-dark);
+  --color-text-muted: var(--theme-text-muted);
   --color-white: #FFFFFF;
+}
 
-  --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-sans: "Outfit", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+@layer base {
+  :root {
+    /* DEFAULT (Wine/Lilac Theme) */
+    --theme-cream: #FEFBEC;
+    --theme-cream-dark: #F0E8D8;
+    --theme-wine: #90465C;
+    --theme-wine-dark: #6E3347;
+    --theme-lilac: #C8A2C8;
+    --theme-lilac-dark: #2A1F2D;
+    --theme-navbar: #1E0F1E;
+    --theme-text-dark: #2C1B2C;
+    --theme-text-muted: #4A3545;
+  }
+
+  [data-theme="terracotta"] {
+    /* ALTERNATE: Terracotta Theme */
+    --theme-cream: #F7E9DE;
+    --theme-cream-dark: #EADCD1;
+    --theme-wine: #A85A5E;  /* Muted Rose/Terracotta midplate */
+    --theme-wine-dark: #622625; /* Deep Rust Brown */
+    --theme-lilac: #B4AEBA;  /* Slate/Sage Blue Grey */
+    --theme-lilac-dark: #543B52; /* Deep Plum Black */
+    --theme-navbar: #1E0F1E;
+    --theme-text-dark: #2C1B2C;
+  }
 }
 
 @layer base {
@@ -30,6 +54,8 @@
   body {
     background-color: var(--color-cream);
     color: var(--color-text-dark);
+    --font-serif: "Outfit", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-sans: "Outfit", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     font-family: var(--font-sans);
     font-weight: 400;
     line-height: 1.8;

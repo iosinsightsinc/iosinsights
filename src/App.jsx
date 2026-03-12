@@ -10,11 +10,13 @@ import Contact from "./pages/Contact";
 import MyApproach from "./pages/MyApproach";
 import Resources from "./pages/Resources";
 import ScrollToTop from "./components/ScrollToTop";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   return (
     <Router basename="/iosinsights">
       <ScrollToTop />
+      <ThemeToggle />
       <div className="min-h-screen bg-[var(--color-cream)] text-[var(--color-text-dark)] selection:bg-[var(--color-wine)]/30 flex flex-col">
         <Navbar />
         <main className="flex-grow">

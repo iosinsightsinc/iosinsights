@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import SpinningLogo from "../components/SpinningLogo";
-import { Heart, Brain, Puzzle, ClipboardList, Briefcase, Monitor, ArrowRight } from "lucide-react";
+import { Heart, Brain, Puzzle, ClipboardList, Briefcase, Monitor, ArrowRight, Wind, Users, Box } from "lucide-react";
 
 const services = [
     {
@@ -12,11 +12,32 @@ const services = [
         excerpt: "Depression can feel like not wanting to get out of bed, a weight on your shoulders making everything feel hard, or the critical voice in your head. We work to uncover the root causes — not just mask symptoms.",
     },
     {
+        slug: "anxiety",
+        icon: <Wind size={32} strokeWidth={1.5} />,
+        title: "Therapy for Anxiety",
+        tagline: "Quiet the noise and find your center.",
+        excerpt: "Anxiety can manifest as racing thoughts, chronic worry, or physical panic. We help you understand your nervous system's response and build somatic tools to regain a sense of safety and calm.",
+    },
+    {
+        slug: "attachment",
+        icon: <Users size={32} strokeWidth={1.5} />,
+        title: "Attachment Therapy",
+        tagline: "Build the relationships you want.",
+        excerpt: "We believe that people heal in safe, attuned relationships. Explore the foundation of your attachment style to shift long-standing beliefs held in mind and body, moving from surviving to thriving.",
+    },
+    {
+        slug: "sandtray",
+        icon: <Box size={32} strokeWidth={1.5} />,
+        title: "Sandtray Therapy",
+        tagline: "Process what words cannot capture.",
+        excerpt: "A powerful somatic tool that aids with the body communicating felt emotions and traumas the mind cannot yet name. It helps with embodied processing and supports narrative exploration.",
+    },
+    {
         slug: "trauma",
         icon: <Brain size={32} strokeWidth={1.5} />,
         title: "Trauma Therapy",
         tagline: "Healing begins when you are supported to feel safe.",
-        excerpt: "Whether it's complex, developmental, or single-incident trauma, we use evidence-based modalities like EMDR, somatic therapy, and emotion-focused therapy to support your healing journey.",
+        excerpt: "Whether it's complex, developmental, or single-incident trauma, we use evidence-based modalities like somatic therapy, emotion-focused therapy, and Internal Family Systems to support your healing journey.",
     },
     {
         slug: "play",
