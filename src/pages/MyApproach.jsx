@@ -109,9 +109,9 @@ export default function MyApproach() {
                         }}>
                             How I Work
                         </p>
-                        <h1 style={{
-                            fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
-                            color: "var(--color-cream)", lineHeight: 1.1,
+                        <h1 
+                            className="hero-title"
+                            style={{
                             marginBottom: "2rem",
                         }}>
                             My Approach <br />

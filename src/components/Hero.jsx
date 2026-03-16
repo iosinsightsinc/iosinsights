@@ -99,14 +99,11 @@ export default function Hero() {
 
                     {/* Main heading — LARGE */}
                     <motion.h1
+                        className="hero-title"
                         initial={{ opacity: 0, y: 25 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.5 }}
                         style={{
-                            fontFamily: "var(--font-serif)",
-                            fontSize: "clamp(3rem, 7vw, 5.5rem)",
-                            color: "var(--color-cream)",
-                            lineHeight: 1.05,
                             maxWidth: "1000px",
                             marginBottom: "2rem",
                         }}
