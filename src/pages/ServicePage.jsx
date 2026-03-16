@@ -325,13 +325,13 @@ export default function ServicePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundColor: "var(--color-wine)", padding: "4rem 1.5rem" }}
+                style={{ backgroundColor: "#A1A79E", padding: "4rem 1.5rem" }}
                 className="text-center"
             >
                 <p style={{
                     fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
                     letterSpacing: "0.2em", textTransform: "uppercase",
-                    color: "var(--color-lilac)", marginBottom: "1.5rem",
+                    color: "#B57B66", marginBottom: "1.5rem",
                 }}>
                     Specialized Therapy
                 </p>

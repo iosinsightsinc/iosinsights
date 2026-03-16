@@ -93,7 +93,7 @@ export default function Hero() {
                         style={{
                             fontFamily: "var(--font-sans)", fontSize: "0.78rem", fontWeight: 600,
                             letterSpacing: "0.25em", textTransform: "uppercase",
-                            color: "#DECEBF",  /* Blush label */
+                            color: "#B57B66",  /* Terracotta — matches buttons */
                             marginBottom: "1.5rem",
                         }}
                     >
@@ -116,7 +116,7 @@ export default function Hero() {
                         }}
                     >
                         Helping You Choose <br />
-                        the Life <em style={{ color: "#DECEBF" }}>You Want to Live</em>  {/* Blush italic */}
+                        the Life <em style={{ color: "#B57B66" }}>You Want to Live</em>  {/* Terracotta — matches buttons */}
                     </motion.h1>
 
                     {/* Subtitle */}

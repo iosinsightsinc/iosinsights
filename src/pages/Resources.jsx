@@ -89,13 +89,13 @@ export default function Resources() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundColor: "var(--color-wine)", padding: "6rem 1.5rem" }}
+                style={{ backgroundColor: "#A1A79E", padding: "6rem 1.5rem" }}
                 className="text-center"
             >
                 <p style={{
                     fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
                     letterSpacing: "0.2em", textTransform: "uppercase",
-                    color: "var(--color-lilac)", marginBottom: "1.5rem",
+                    color: "#B57B66", marginBottom: "1.5rem",
                 }}>
                     Mental Health Resources
                 </p>
@@ -105,7 +105,7 @@ export default function Resources() {
                     maxWidth: "800px", margin: "0 auto 2rem",
                 }}>
                     Tools to Support <br />
-                    <em style={{ color: "rgba(252, 246, 242,0.65)" }}>Your Journey</em>
+                    <em style={{ color: "#B57B66" }}>Your Journey</em>
                 </h1>
                 <p style={{
                     color: "rgba(252, 246, 242,0.7)", fontWeight: 400,

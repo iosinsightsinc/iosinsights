@@ -67,7 +67,7 @@ export default function MyApproach() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundColor: "var(--color-wine)", padding: "5rem 1.5rem" }}
+                style={{ backgroundColor: "#A1A79E", padding: "5rem 1.5rem" }}
             >
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {/* Photo */}
@@ -105,7 +105,7 @@ export default function MyApproach() {
                         <p style={{
                             fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
                             letterSpacing: "0.2em", textTransform: "uppercase",
-                            color: "var(--color-lilac)", marginBottom: "1.5rem",
+                            color: "#C4A98A", marginBottom: "1.5rem",
                         }}>
                             How I Work
                         </p>
