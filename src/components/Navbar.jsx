@@ -34,10 +34,10 @@ function Dropdown({ items }) {
             transition={{ type: "spring", stiffness: 400, damping: 30, mass: 0.8 }}
             style={{
                 position: "absolute", top: "calc(100% + 0.75rem)", left: "50%", transform: "translateX(-50%)",
-                backgroundColor: "rgba(42, 23, 25,0.92)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
-                border: "1px solid rgba(217, 187, 186,0.12)",
+                backgroundColor: "rgba(42, 54, 48,0.92)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
+                border: "1px solid rgba(222, 206, 191,0.12)",
                 borderRadius: "1.25rem", minWidth: "280px", overflow: "hidden", zIndex: 200,
-                boxShadow: "0 25px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(217, 187, 186,0.06)",
+                boxShadow: "0 25px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(222, 206, 191,0.06)",
                 padding: "0.5rem 0",
             }}
         >
@@ -51,7 +51,7 @@ function Dropdown({ items }) {
                     <Link to={item.href}
                         style={{
                             display: "flex", alignItems: "center", gap: "0.75rem",
-                            padding: "0.9rem 1.5rem", color: "rgba(252, 246, 242,0.7)",
+                            padding: "0.9rem 1.5rem", color: "rgba(244, 243, 241,0.7)",
                             fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 500,
                             letterSpacing: "0.08em", textTransform: "uppercase",
                             transition: "all 0.2s ease", textDecoration: "none",
@@ -59,11 +59,11 @@ function Dropdown({ items }) {
                         }}
                         onMouseOver={e => {
                             e.currentTarget.style.color = "var(--color-cream)";
-                            e.currentTarget.style.backgroundColor = "rgba(217, 187, 186,0.12)";
+                            e.currentTarget.style.backgroundColor = "rgba(222, 206, 191,0.12)";
                             e.currentTarget.style.paddingLeft = "1.75rem";
                         }}
                         onMouseOut={e => {
-                            e.currentTarget.style.color = "rgba(252, 246, 242,0.7)";
+                            e.currentTarget.style.color = "rgba(244, 243, 241,0.7)";
                             e.currentTarget.style.backgroundColor = "transparent";
                             e.currentTarget.style.paddingLeft = "1.5rem";
                         }}

@@ -53,7 +53,7 @@ export default function AboutMe() {
                                 width: "100%", borderRadius: "1.5rem",
                                 objectFit: "cover", aspectRatio: "4/5",
                                 position: "relative", zIndex: 1,
-                                boxShadow: "0 20px 60px rgba(42, 23, 25,0.15)",
+                                boxShadow: "0 20px 60px rgba(42, 54, 48,0.15)",
                             }}
                         />
                     </motion.div>
@@ -103,7 +103,7 @@ export default function AboutMe() {
                         <div className="flex flex-wrap gap-2 pt-2">
                             {specialties.map((s, i) => (
                                 <span key={i} style={{
-                                    backgroundColor: "rgba(160, 89, 98,0.08)", color: "var(--color-wine)",
+                                    backgroundColor: "rgba(161, 167, 158,0.08)", color: "var(--color-wine)",
                                     fontSize: "0.7rem", letterSpacing: "0.1em", fontWeight: 600,
                                     padding: "0.4rem 1rem", borderRadius: "9999px", textTransform: "uppercase",
                                 }}>

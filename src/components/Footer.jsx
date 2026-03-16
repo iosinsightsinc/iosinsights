@@ -21,19 +21,19 @@ export default function Footer() {
                         </div>
                     </div>
                     <p style={{
-                        color: "rgba(252, 246, 242,0.75)", fontWeight: 300, fontSize: "0.95rem", lineHeight: 1.9, maxWidth: "360px", marginBottom: "2rem"
+                        color: "rgba(244, 243, 241,0.75)", fontWeight: 300, fontSize: "0.95rem", lineHeight: 1.9, maxWidth: "360px", marginBottom: "2rem"
                     }}>
                         Helping you choose the life you want to live. Serving individuals, children, and families across Sherwood Park and Alberta.
                     </p>
                     <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer"
                         style={{
-                            display: "inline-block", border: "1.5px solid rgba(252, 246, 242,0.25)",
-                            color: "rgba(252, 246, 242,0.8)", padding: "0.8rem 2rem", borderRadius: "9999px",
+                            display: "inline-block", border: "1.5px solid rgba(244, 243, 241,0.25)",
+                            color: "rgba(244, 243, 241,0.8)", padding: "0.8rem 2rem", borderRadius: "9999px",
                             fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase",
                             fontWeight: 500, transition: "all 0.3s ease", textDecoration: "none",
                         }}
                         onMouseOver={e => { e.currentTarget.style.borderColor = "var(--color-wine)"; e.currentTarget.style.color = "var(--color-cream)"; e.currentTarget.style.backgroundColor = "var(--color-wine)"; }}
-                        onMouseOut={e => { e.currentTarget.style.borderColor = "rgba(252, 246, 242,0.25)"; e.currentTarget.style.color = "rgba(252, 246, 242,0.8)"; e.currentTarget.style.backgroundColor = "transparent"; }}
+                        onMouseOut={e => { e.currentTarget.style.borderColor = "rgba(244, 243, 241,0.25)"; e.currentTarget.style.color = "rgba(244, 243, 241,0.8)"; e.currentTarget.style.backgroundColor = "transparent"; }}
                     >
                         Connect with Me
                     </a>
@@ -54,9 +54,9 @@ export default function Footer() {
                         ].map(([label, href]) => (
                             <li key={label}>
                                 <Link to={href}
-                                    style={{ color: "rgba(252, 246, 242,0.7)", fontSize: "0.875rem", fontWeight: 300, transition: "color 0.2s", textDecoration: "none" }}
+                                    style={{ color: "rgba(244, 243, 241,0.7)", fontSize: "0.875rem", fontWeight: 300, transition: "color 0.2s", textDecoration: "none" }}
                                     onMouseOver={e => e.currentTarget.style.color = "var(--color-lilac)"}
-                                    onMouseOut={e => e.currentTarget.style.color = "rgba(252, 246, 242,0.7)"}
+                                    onMouseOut={e => e.currentTarget.style.color = "rgba(244, 243, 241,0.7)"}
                                 >
                                     {label}
                                 </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
                             "363 SIOUX RD",
                             "SHERWOOD PARK, AB T8A 4W7",
                         ].map((line) => (
-                            <li key={line} style={{ color: "rgba(252, 246, 242,0.7)", fontSize: "0.875rem", fontWeight: 300 }}>
+                            <li key={line} style={{ color: "rgba(244, 243, 241,0.7)", fontSize: "0.875rem", fontWeight: 300 }}>
                                 {line}
                             </li>
                         ))}
@@ -88,10 +88,10 @@ export default function Footer() {
 
             {/* Footer bottom bar */}
             <div
-                style={{ borderTop: "1px solid rgba(252, 246, 242,0.08)", padding: "1.5rem 1.5rem" }}
+                style={{ borderTop: "1px solid rgba(244, 243, 241,0.08)", padding: "1.5rem 1.5rem" }}
                 className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"
             >
-                <p style={{ color: "rgba(252, 246, 242,0.5)", fontSize: "0.75rem", fontWeight: 300 }}>
+                <p style={{ color: "rgba(244, 243, 241,0.5)", fontSize: "0.75rem", fontWeight: 300 }}>
                     © {new Date().getFullYear()} iOS Insights INC. All Rights Reserved.
                 </p>
             </div>

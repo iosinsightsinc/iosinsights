@@ -95,20 +95,20 @@ export default function ServicesOverview() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="flex flex-col justify-end"
                     >
-                        <p style={{ color: "rgba(252, 246, 242,0.7)", fontWeight: 300, lineHeight: 1.9, fontSize: "1.2rem" }}>
+                        <p style={{ color: "rgba(244, 243, 241,0.7)", fontWeight: 300, lineHeight: 1.9, fontSize: "1.2rem" }}>
                             Each of our therapy streams is deep, empathetic, and tailored specifically to your unique mental landscape. We don't treat symptoms — we unravel causes.
                         </p>
                         <Link to="/services"
                             style={{
                                 display: "inline-block", alignSelf: "flex-start", marginTop: "2rem",
                                 padding: "0.9rem 2.5rem", borderRadius: "9999px",
-                                border: "1.5px solid rgba(252, 246, 242,0.35)", color: "var(--color-cream)",
+                                border: "1.5px solid rgba(244, 243, 241,0.35)", color: "var(--color-cream)",
                                 fontFamily: "var(--font-sans)", fontSize: "0.75rem", fontWeight: 600,
                                 letterSpacing: "0.15em", textTransform: "uppercase",
                                 transition: "all 0.3s ease", textDecoration: "none",
                             }}
                             onMouseOver={e => { e.currentTarget.style.backgroundColor = "var(--color-cream)"; e.currentTarget.style.color = "var(--color-lilac-dark)"; e.currentTarget.style.borderColor = "var(--color-cream)"; }}
-                            onMouseOut={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = "var(--color-cream)"; e.currentTarget.style.borderColor = "rgba(252, 246, 242,0.35)"; }}
+                            onMouseOut={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = "var(--color-cream)"; e.currentTarget.style.borderColor = "rgba(244, 243, 241,0.35)"; }}
                         >
                             View All Services
                         </Link>

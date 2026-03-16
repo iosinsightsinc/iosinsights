@@ -28,7 +28,7 @@ function FlowingLine({ d, delay }) {
         <motion.path
             d={d}
             fill="transparent"
-            stroke="rgba(217, 187, 186,0.2)"
+            stroke="rgba(222, 206, 191,0.2)"
             strokeWidth="1"
             strokeLinecap="round"
             initial={{ pathLength: 0, opacity: 0 }}
@@ -54,18 +54,18 @@ export default function Hero() {
             <div style={{
                 position: "absolute", inset: 0,
                 background: `
-                    radial-gradient(ellipse 80% 60% at 20% 20%, rgba(217, 187, 186,0.15) 0%, transparent 50%),
-                    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(110,51,71,0.4) 0%, transparent 50%),
-                    radial-gradient(ellipse 40% 40% at 50% 90%, rgba(42,31,45,0.3) 0%, transparent 50%)
+                    radial-gradient(ellipse 80% 60% at 20% 20%, rgba(222, 206, 191,0.15) 0%, transparent 50%),
+                    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(181, 123, 102,0.4) 0%, transparent 50%),
+                    radial-gradient(ellipse 40% 40% at 50% 90%, rgba(104, 117, 109,0.3) 0%, transparent 50%)
                 `,
             }} />
 
             {/* Animated floating orbs */}
-            <FloatingOrb size="180px" x="5%" y="15%" color="rgba(217, 187, 186,0.08)" delay={0} duration={14} />
-            <FloatingOrb size="120px" x="75%" y="10%" color="rgba(252, 246, 242,0.05)" delay={2} duration={11} />
-            <FloatingOrb size="90px" x="85%" y="65%" color="rgba(217, 187, 186,0.06)" delay={1} duration={16} />
-            <FloatingOrb size="200px" x="-5%" y="60%" color="rgba(110,51,71,0.1)" delay={3} duration={18} />
-            <FloatingOrb size="60px" x="40%" y="80%" color="rgba(252, 246, 242,0.04)" delay={4} duration={10} />
+            <FloatingOrb size="180px" x="5%" y="15%" color="rgba(222, 206, 191,0.08)" delay={0} duration={14} />
+            <FloatingOrb size="120px" x="75%" y="10%" color="rgba(244, 243, 241,0.05)" delay={2} duration={11} />
+            <FloatingOrb size="90px" x="85%" y="65%" color="rgba(222, 206, 191,0.06)" delay={1} duration={16} />
+            <FloatingOrb size="200px" x="-5%" y="60%" color="rgba(181, 123, 102,0.1)" delay={3} duration={18} />
+            <FloatingOrb size="60px" x="40%" y="80%" color="rgba(244, 243, 241,0.04)" delay={4} duration={10} />
 
             {/* Flowing SVG lines */}
             <svg
@@ -121,7 +121,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.7 }}
                         style={{
-                            color: "rgba(252, 246, 242,0.7)", fontWeight: 300,
+                            color: "rgba(244, 243, 241,0.7)", fontWeight: 300,
                             maxWidth: "700px", fontSize: "1.25rem", lineHeight: 1.8,
                             marginBottom: "3rem",
                         }}
@@ -138,16 +138,16 @@ export default function Hero() {
                     >
                         <span style={{
                             padding: "0.45rem 1.2rem", borderRadius: "9999px",
-                            border: "1px solid rgba(217, 187, 186,0.25)",
-                            color: "rgba(252, 246, 242,0.8)", fontFamily: "var(--font-sans)",
+                            border: "1px solid rgba(222, 206, 191,0.25)",
+                            color: "rgba(244, 243, 241,0.8)", fontFamily: "var(--font-sans)",
                             fontSize: "0.7rem", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase",
                         }}>
                             📍 In-Person — Alberta
                         </span>
                         <span style={{
                             padding: "0.45rem 1.2rem", borderRadius: "9999px",
-                            border: "1px solid rgba(217, 187, 186,0.25)",
-                            color: "rgba(252, 246, 242,0.8)", fontFamily: "var(--font-sans)",
+                            border: "1px solid rgba(222, 206, 191,0.25)",
+                            color: "rgba(244, 243, 241,0.8)", fontFamily: "var(--font-sans)",
                             fontSize: "0.7rem", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase",
                         }}>
                             💻 Virtual — AB · NS · MB · SK
@@ -178,11 +178,11 @@ export default function Hero() {
                             padding: "1rem 2.25rem", borderRadius: "9999px",
                             fontFamily: "var(--font-sans)", fontSize: "0.85rem", fontWeight: 700,
                             letterSpacing: "0.15em", textTransform: "uppercase", textDecoration: "none",
-                            border: "1px solid rgba(252, 246, 242,0.2)",
+                            border: "1px solid rgba(244, 243, 241,0.2)",
                             transition: "all 0.3s",
                         }}
-                        onMouseOver={e => { e.currentTarget.style.backgroundColor = "rgba(252, 246, 242,0.05)"; e.currentTarget.style.borderColor = "rgba(252, 246, 242,0.4)"; }}
-                        onMouseOut={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.borderColor = "rgba(252, 246, 242,0.2)"; }}
+                        onMouseOver={e => { e.currentTarget.style.backgroundColor = "rgba(244, 243, 241,0.05)"; e.currentTarget.style.borderColor = "rgba(244, 243, 241,0.4)"; }}
+                        onMouseOut={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.borderColor = "rgba(244, 243, 241,0.2)"; }}
                         >
                             Learn More
                         </a>
@@ -212,14 +212,14 @@ export default function Hero() {
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     style={{
                         width: "24px", height: "40px", borderRadius: "12px",
-                        border: "1.5px solid rgba(252, 246, 242,0.3)",
+                        border: "1.5px solid rgba(244, 243, 241,0.3)",
                         display: "flex", justifyContent: "center", paddingTop: "8px",
                     }}
                 >
                     <motion.div
                         animate={{ opacity: [1, 0.3, 1], y: [0, 12, 0] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                        style={{ width: "3px", height: "8px", borderRadius: "2px", backgroundColor: "rgba(252, 246, 242,0.5)" }}
+                        style={{ width: "3px", height: "8px", borderRadius: "2px", backgroundColor: "rgba(244, 243, 241,0.5)" }}
                     />
                 </motion.div>
             </motion.div>

@@ -22,19 +22,19 @@ function FloatingOrb({ size, x, y, color, delay, duration }) {
 
 /* Preset orb configurations for different section types */
 const creamPreset = [
-    { size: "140px", x: "5%",  y: "10%", color: "rgba(217, 187, 186,0.08)", delay: 0,   duration: 14 },
-    { size: "100px", x: "80%", y: "15%", color: "rgba(160, 89, 98,0.06)",   delay: 2,   duration: 11 },
-    { size: "80px",  x: "70%", y: "70%", color: "rgba(217, 187, 186,0.06)", delay: 1,   duration: 16 },
-    { size: "160px", x: "-3%", y: "60%", color: "rgba(160, 89, 98,0.05)",   delay: 3,   duration: 18 },
-    { size: "50px",  x: "45%", y: "85%", color: "rgba(217, 187, 186,0.05)", delay: 4,   duration: 10 },
+    { size: "140px", x: "5%",  y: "10%", color: "rgba(222, 206, 191,0.08)", delay: 0,   duration: 14 },
+    { size: "100px", x: "80%", y: "15%", color: "rgba(161, 167, 158,0.06)",   delay: 2,   duration: 11 },
+    { size: "80px",  x: "70%", y: "70%", color: "rgba(222, 206, 191,0.06)", delay: 1,   duration: 16 },
+    { size: "160px", x: "-3%", y: "60%", color: "rgba(161, 167, 158,0.05)",   delay: 3,   duration: 18 },
+    { size: "50px",  x: "45%", y: "85%", color: "rgba(222, 206, 191,0.05)", delay: 4,   duration: 10 },
 ];
 
 const winePreset = [
-    { size: "160px", x: "5%",  y: "12%", color: "rgba(217, 187, 186,0.08)", delay: 0,   duration: 14 },
-    { size: "110px", x: "78%", y: "8%",  color: "rgba(252, 246, 242,0.04)", delay: 2,   duration: 11 },
-    { size: "85px",  x: "85%", y: "65%", color: "rgba(217, 187, 186,0.06)", delay: 1,   duration: 16 },
-    { size: "180px", x: "-5%", y: "55%", color: "rgba(110,51,71,0.1)",    delay: 3,   duration: 18 },
-    { size: "55px",  x: "40%", y: "80%", color: "rgba(252, 246, 242,0.03)", delay: 4,   duration: 10 },
+    { size: "160px", x: "5%",  y: "12%", color: "rgba(222, 206, 191,0.08)", delay: 0,   duration: 14 },
+    { size: "110px", x: "78%", y: "8%",  color: "rgba(244, 243, 241,0.04)", delay: 2,   duration: 11 },
+    { size: "85px",  x: "85%", y: "65%", color: "rgba(222, 206, 191,0.06)", delay: 1,   duration: 16 },
+    { size: "180px", x: "-5%", y: "55%", color: "rgba(181, 123, 102,0.1)",    delay: 3,   duration: 18 },
+    { size: "55px",  x: "40%", y: "80%", color: "rgba(244, 243, 241,0.03)", delay: 4,   duration: 10 },
 ];
 
 export default function FloatingOrbs({ variant = "cream" }) {
