@@ -94,7 +94,7 @@ export default function AboutMe() {
                             My job is to help you gently explore what's been getting in the way — usually unmet needs that haven't been named, or emotional patterns that made sense at some point, but now feel stuck. When we understand the ways our past relationships and environments have shaped how we see ourselves and others, it starts to make sense why we react the way we do — or avoid, shut down, or feel overwhelmed.
                         </p>
                         <p style={{ color: "#4D5E55", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
-                            I have over 7 years of experience offering therapy to adults, teens, and children in need. I hold additional certifications in trauma-informed expressive arts, attachment-focused therapy, flash therapy, emotion-focused individual & family therapy, and play therapy.
+                            I have over 9 years of experience offering therapy to adults, teens, and children in need. I hold additional certifications in trauma-informed expressive arts, attachment-focused therapy, flash therapy, emotion-focused individual & family therapy, and play therapy.
                         </p>
 
                         {/* Blockquote — Terracotta left border */}
