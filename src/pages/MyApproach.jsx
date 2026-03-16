@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import SpinningLogo from "../components/SpinningLogo";
-import { CheckCircle2, Heart, Brain, Shield, Users, Sparkles, BookOpen } from "lucide-react";
+import { CheckCircle2, Heart, Brain, Shield, Users, Sparkles, BookOpen, ChevronDown } from "lucide-react";
 
 const approachPrinciples = [
     {
@@ -36,18 +37,18 @@ const approachPrinciples = [
 ];
 
 const therapyModalities = [
-    "Emotion-Focused Therapy (EFT)",
-    "Somatic Therapy",
-    "Internal Family Systems (IFS)",
-    "Acceptance & Commitment Therapy (ACT)",
-    "Trauma Focused-Cognitive Behavioural Therapy (TF-CBT)",
-    "Strengths Based Therapy",
-    "Solution-Focused Therapy",
-    "Motivational Interviewing",
-    "Thera-play (Level One Foundational)",
-    "Trauma-Focused Expressive Arts Therapy",
-    "Cognitive Processing Therapy (CPT)",
-    "Flash Therapy",
+    { title: "Emotion-Focused Therapy (EFT)", content: "Content for Emotion-Focused Therapy will go here." },
+    { title: "Somatic Therapy", content: "Content for Somatic Therapy will go here." },
+    { title: "Internal Family Systems (IFS)", content: "Content for Internal Family Systems will go here." },
+    { title: "Acceptance & Commitment Therapy (ACT)", content: "Content for Acceptance & Commitment Therapy will go here." },
+    { title: "Trauma Focused-Cognitive Behavioural Therapy (TF-CBT)", content: "Content for Trauma Focused-Cognitive Behavioural Therapy will go here." },
+    { title: "Strengths Based Therapy", content: "Content for Strengths Based Therapy will go here." },
+    { title: "Solution-Focused Therapy", content: "Content for Solution-Focused Therapy will go here." },
+    { title: "Motivational Interviewing", content: "Content for Motivational Interviewing will go here." },
+    { title: "Thera-play (Level One Foundational)", content: "Content for Thera-play will go here." },
+    { title: "Trauma-Focused Expressive Arts Therapy", content: "Content for Trauma-Focused Expressive Arts Therapy will go here." },
+    { title: "Cognitive Processing Therapy (CPT)", content: "Content for Cognitive Processing Therapy will go here." },
+    { title: "Flash Therapy", content: "Content for Flash Therapy will go here." },
 ];
 
 const education = [
@@ -55,10 +56,16 @@ const education = [
     "School of Graduate Studies Silver Medal of Merit Award recipient",
     "9+ years of clinical experience in evidence-based assessment, diagnosis, and treatment",
     "Worked with non-profit organizations, school-based services, and Alberta Health Services",
-    "Currently completing ADHD Certified Clinical Services Provider (ADHD-CCSP) certification",
+];
+
+const inProgressCerts = [
+    { title: "ADHD Certified Clinical Services Provider (ADHD-CCSP) certification", content: "Detailed content about this ADHD certification will be added here as it progresses." },
 ];
 
 export default function MyApproach() {
+    const [openModality, setOpenModality] = useState(null);
+    const [openInProgress, setOpenInProgress] = useState(null);
+
     return (
         <div style={{ backgroundColor: "var(--color-cream)" }} className="w-full pt-28">
 
@@ -246,15 +253,70 @@ export default function MyApproach() {
                     }}>
                         Therapeutic Modalities & Training
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {therapyModalities.map((item, i) => (
-                            <div key={i} className="flex gap-3 items-center">
-                                <CheckCircle2 size={18} className="flex-shrink-0" style={{ color: "var(--color-wine)" }} />
-                                <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.15rem" }}>
-                                    {item}
-                                </p>
-                            </div>
-                        ))}
+                    <div className="flex flex-col gap-4">
+                        {therapyModalities.map((item, i) => {
+                            const isOpen = openModality === i;
+                            return (
+                                <div 
+                                    key={i} 
+                                    className="overflow-hidden"
+                                    style={{
+                                        backgroundColor: "var(--color-cream)", 
+                                        borderRadius: "1rem",
+                                        border: "1px solid rgba(217, 187, 186,0.3)",
+                                        transition: "all 0.3s ease"
+                                    }}
+                                >
+                                    <button 
+                                        onClick={() => setOpenModality(isOpen ? null : i)}
+                                        className="w-full text-left flex justify-between items-center px-6 py-5 cursor-pointer"
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <CheckCircle2 size={20} className="flex-shrink-0" style={{ color: "var(--color-wine)" }} />
+                                            <span style={{ 
+                                                fontFamily: "var(--font-serif)", 
+                                                color: "var(--color-text-dark)", 
+                                                fontSize: "1.3rem",
+                                                fontWeight: 500
+                                            }}>
+                                                {item.title}
+                                            </span>
+                                        </div>
+                                        <motion.div
+                                            animate={{ rotate: isOpen ? 180 : 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="flex-shrink-0 ml-4"
+                                            style={{ color: "var(--color-wine)" }}
+                                        >
+                                            <ChevronDown size={20} />
+                                        </motion.div>
+                                    </button>
+                                    
+                                    <AnimatePresence>
+                                        {isOpen && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: "auto", opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                            >
+                                                <div 
+                                                    className="px-6 pb-6 pt-2"
+                                                    style={{ 
+                                                        color: "var(--color-text-muted)", 
+                                                        fontWeight: 300, 
+                                                        fontSize: "1.1rem", 
+                                                        lineHeight: 1.8 
+                                                    }}
+                                                >
+                                                    {item.content}
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </motion.div>
@@ -283,6 +345,75 @@ export default function MyApproach() {
                             </p>
                         </div>
                     ))}
+
+                    <div className="pt-8 space-y-6">
+                        <p className="section-label">In-Progress Certifications</p>
+                        <div className="flex flex-col gap-4">
+                            {inProgressCerts.map((item, i) => {
+                                const isOpen = openInProgress === i;
+                                return (
+                                    <div 
+                                        key={i} 
+                                        className="overflow-hidden"
+                                        style={{
+                                            backgroundColor: "var(--color-cream-dark)", 
+                                            borderRadius: "1rem",
+                                            border: "1px solid rgba(217, 187, 186,0.3)",
+                                            transition: "all 0.3s ease"
+                                        }}
+                                    >
+                                        <button 
+                                            onClick={() => setOpenInProgress(isOpen ? null : i)}
+                                            className="w-full text-left flex justify-between items-center px-6 py-5 cursor-pointer"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <span style={{ color: "var(--color-wine)", fontSize: "1.1rem", lineHeight: 1.5, flexShrink: 0 }}>✦</span>
+                                                <span style={{ 
+                                                    fontFamily: "var(--font-serif)", 
+                                                    color: "var(--color-text-dark)", 
+                                                    fontSize: "1.25rem",
+                                                    fontWeight: 500
+                                                }}>
+                                                    {item.title}
+                                                </span>
+                                            </div>
+                                            <motion.div
+                                                animate={{ rotate: isOpen ? 180 : 0 }}
+                                                transition={{ duration: 0.3 }}
+                                                className="flex-shrink-0 ml-4"
+                                                style={{ color: "var(--color-wine)" }}
+                                            >
+                                                <ChevronDown size={20} />
+                                            </motion.div>
+                                        </button>
+                                        
+                                        <AnimatePresence>
+                                            {isOpen && (
+                                                <motion.div
+                                                    initial={{ height: 0, opacity: 0 }}
+                                                    animate={{ height: "auto", opacity: 1 }}
+                                                    exit={{ height: 0, opacity: 0 }}
+                                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                                >
+                                                    <div 
+                                                        className="px-6 pb-6 pt-2"
+                                                        style={{ 
+                                                            color: "var(--color-text-muted)", 
+                                                            fontWeight: 300, 
+                                                            fontSize: "1.1rem", 
+                                                            lineHeight: 1.8 
+                                                        }}
+                                                    >
+                                                        {item.content}
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
                 </motion.div>
             </div>
 
