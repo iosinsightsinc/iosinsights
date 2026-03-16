@@ -46,7 +46,7 @@ export default function Hero() {
                 backgroundColor: "#A1A79E",  /* Sage — hero background */
                 position: "relative",
                 overflow: "hidden",
-                minHeight: "92vh",
+                minHeight: "85vh",
                 display: "flex",
                 alignItems: "center",
             }}
@@ -80,7 +80,7 @@ export default function Hero() {
             </svg>
 
             {/* Main content */}
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 lg:px-12 py-24 md:py-32 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 lg:px-12 py-16 md:py-20 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
                 
                 {/* Left: Text */}
                 <div className="flex-1 lg:w-3/5 text-left flex flex-col items-start lg:pr-12">
@@ -111,7 +111,7 @@ export default function Hero() {
                             color: "#F4F3F1",  /* Ivory */
                             lineHeight: 1.05,
                             maxWidth: "1000px",
-                            marginBottom: "2rem",
+                            marginBottom: "1.5rem",
                             fontWeight: 500,
                         }}
                     >
@@ -127,7 +127,7 @@ export default function Hero() {
                         style={{
                             color: "rgba(244, 243, 241, 0.85)", fontWeight: 300,
                             maxWidth: "700px", fontSize: "1.25rem", lineHeight: 1.8,
-                            marginBottom: "3rem",
+                            marginBottom: "2rem",
                         }}
                     >
                         Accessing support is not a sign of weakness — it is a sign of self-love. 🤍
@@ -138,7 +138,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.8 }}
-                        className="flex flex-wrap gap-3 mb-10"
+                        className="flex flex-wrap gap-3 mb-8"
                     >
                         {["📍 In-Person — Alberta", "💻 Virtual — AB · NS · MB · SK"].map(label => (
                             <span key={label} style={{
