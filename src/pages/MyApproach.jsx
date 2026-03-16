@@ -299,7 +299,7 @@ export default function MyApproach() {
                 >
                     <p className="section-label mb-4">Beyond the Office</p>
                     <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
-                        In my spare time, I enjoy spending time with my family, friends, and my furry angels (aka my dogs). When I am not in therapist-mode, you can catch me binge-watching something completely random — reality TV, true crime documentaries, or Disney shows circa 2010. My go-to forms of self-care are weightlifting and spending time perfecting my skills as a dissectologist 😊.
+                        In my spare time, I enjoy spending time with my family, friends, and my furry angels (aka my dogs). When I am not in therapist-mode, you can catch me binge-watching something completely random — reality TV, true crime documentaries, or Disney shows circa 2010. My go-to forms of self-care are weightlifting and spending time perfecting my skills as a dissectologist (it's a fancy way of saying I love to do puzzles) 😊.
                     </p>
                 </motion.div>
             </div>
