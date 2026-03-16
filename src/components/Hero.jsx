@@ -93,7 +93,7 @@ export default function Hero() {
                         style={{
                             fontFamily: "var(--font-sans)", fontSize: "0.78rem", fontWeight: 600,
                             letterSpacing: "0.25em", textTransform: "uppercase",
-                            color: "#B57B66",  /* Terracotta — matches buttons */
+                            color: "rgba(244, 243, 241, 0.75)",  /* Ivory — reads cleanly on Sage */
                             marginBottom: "1.5rem",
                         }}
                     >
@@ -116,7 +116,7 @@ export default function Hero() {
                         }}
                     >
                         Helping You Choose <br />
-                        the Life <em style={{ color: "#B57B66" }}>You Want to Live</em>  {/* Terracotta — matches buttons */}
+                        the Life <em style={{ color: "rgba(244, 243, 241, 0.7)" }}>You Want to Live</em>
                     </motion.h1>
 
                     {/* Subtitle */}
