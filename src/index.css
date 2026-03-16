@@ -42,7 +42,7 @@
   body {
     background-color: var(--color-cream);
     color: var(--color-text-dark);
-    --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-serif: "SaolDisplay-Regular", "Playfair Display", ui-serif, Georgia, Cambria, serif;
     --font-logo: "Outfit", ui-sans-serif, system-ui, -apple-system, sans-serif;
     --font-sans: "Poppins", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     font-family: var(--font-sans);
