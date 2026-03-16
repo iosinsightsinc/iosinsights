@@ -59,9 +59,10 @@ const services = [
     },
 ];
 
+// EVERGREEN dark section background with Ivory cards
 export default function ServicesOverview() {
     return (
-        <section style={{ backgroundColor: "var(--color-wine)", position: "relative", overflow: "hidden" }} className="w-full py-28 px-6">
+        <section style={{ backgroundColor: "#4D5E55", position: "relative", overflow: "hidden" }} className="w-full py-28 px-6">
             <FloatingOrbs variant="wine" />
             <div className="max-w-7xl mx-auto relative z-10">
 
@@ -73,19 +74,21 @@ export default function ServicesOverview() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
+                        {/* Label: Blush on Evergreen */}
                         <p style={{
                             fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
                             letterSpacing: "0.2em", textTransform: "uppercase",
-                            color: "var(--color-lilac)", marginBottom: "1rem",
+                            color: "#DECEBF", marginBottom: "1rem",
                         }}>
                             Areas of Practice
                         </p>
+                        {/* Heading: Ivory on Evergreen */}
                         <h2 style={{
                             fontFamily: "var(--font-serif)", fontSize: "clamp(2.2rem, 4vw, 3.8rem)",
-                            color: "var(--color-cream)", lineHeight: 1.15,
+                            color: "#F4F3F1", lineHeight: 1.15,
                         }}>
                             Specialized Therapy <br />
-                            <em>for Every Thread of You</em>
+                            <em style={{ color: "#DECEBF" }}>for Every Thread of You</em>
                         </h2>
                     </motion.div>
                     <motion.div
@@ -95,27 +98,27 @@ export default function ServicesOverview() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="flex flex-col justify-end"
                     >
-                        <p style={{ color: "rgba(244, 243, 241,0.7)", fontWeight: 300, lineHeight: 1.9, fontSize: "1.2rem" }}>
+                        <p style={{ color: "rgba(244, 243, 241, 0.75)", fontWeight: 300, lineHeight: 1.9, fontSize: "1.2rem" }}>
                             Each of our therapy streams is deep, empathetic, and tailored specifically to your unique mental landscape. We don't treat symptoms — we unravel causes.
                         </p>
                         <Link to="/services"
                             style={{
                                 display: "inline-block", alignSelf: "flex-start", marginTop: "2rem",
                                 padding: "0.9rem 2.5rem", borderRadius: "9999px",
-                                border: "1.5px solid rgba(244, 243, 241,0.35)", color: "var(--color-cream)",
+                                border: "1.5px solid rgba(222, 206, 191, 0.45)", color: "#DECEBF",
                                 fontFamily: "var(--font-sans)", fontSize: "0.75rem", fontWeight: 600,
                                 letterSpacing: "0.15em", textTransform: "uppercase",
                                 transition: "all 0.3s ease", textDecoration: "none",
                             }}
-                            onMouseOver={e => { e.currentTarget.style.backgroundColor = "var(--color-cream)"; e.currentTarget.style.color = "var(--color-lilac-dark)"; e.currentTarget.style.borderColor = "var(--color-cream)"; }}
-                            onMouseOut={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = "var(--color-cream)"; e.currentTarget.style.borderColor = "rgba(244, 243, 241,0.35)"; }}
+                            onMouseOver={e => { e.currentTarget.style.backgroundColor = "#B57B66"; e.currentTarget.style.color = "#F4F3F1"; e.currentTarget.style.borderColor = "#B57B66"; }}
+                            onMouseOut={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = "#DECEBF"; e.currentTarget.style.borderColor = "rgba(222, 206, 191, 0.45)"; }}
                         >
                             View All Services
                         </Link>
                     </motion.div>
                 </div>
 
-                {/* Service cards */}
+                {/* Service cards: Ivory bg, Terracotta heading & accent */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {services.map((service, i) => (
                         <motion.div
@@ -123,43 +126,37 @@ export default function ServicesOverview() {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.7, delay: i * 0.1 }}
+                            transition={{ duration: 0.7, delay: i * 0.08 }}
                         >
                             <Link
                                 to={service.link}
-                                style={{ backgroundColor: "var(--color-cream)", borderRadius: "1.25rem", textDecoration: "none" }}
-                                className="flex flex-col h-full p-10 md:p-12 group hover:shadow-lg transition-shadow duration-300 block"
+                                style={{ backgroundColor: "#F4F3F1", borderRadius: "1.25rem", textDecoration: "none", display: "block" }}
+                                className="flex flex-col h-full p-10 md:p-12 group hover:shadow-xl transition-shadow duration-300"
                             >
+                                {/* Category — Terracotta */}
                                 <div className="flex items-center justify-between mb-8">
                                     <span style={{
                                         fontFamily: "var(--font-sans)", fontSize: "0.68rem", letterSpacing: "0.18em",
-                                        color: "var(--color-wine)", fontWeight: 600, textTransform: "uppercase"
+                                        color: "#B57B66", fontWeight: 600, textTransform: "uppercase"
                                     }}>
                                         {service.category}
                                     </span>
-                                    {service.tag && (
-                                        <span style={{
-                                            backgroundColor: "var(--color-wine)", color: "var(--color-cream)",
-                                            fontSize: "0.62rem", letterSpacing: "0.12em",
-                                            padding: "0.25rem 0.75rem", borderRadius: "9999px",
-                                            fontWeight: 600, textTransform: "uppercase"
-                                        }}>
-                                            {service.tag}
-                                        </span>
-                                    )}
                                 </div>
+                                {/* Service title — Terracotta */}
                                 <h3 style={{
                                     fontFamily: "var(--font-serif)", fontSize: "1.9rem",
-                                    color: "var(--color-text-dark)", marginBottom: "1rem", lineHeight: 1.2
+                                    color: "#B57B66", marginBottom: "1rem", lineHeight: 1.2
                                 }}>
                                     {service.title}
                                 </h3>
-                                <p style={{ color: "var(--color-text-muted)", fontWeight: 300, flexGrow: 1, fontSize: "1.15rem", lineHeight: 1.8 }}>
+                                {/* Excerpt — Evergreen */}
+                                <p style={{ color: "#4D5E55", fontWeight: 300, flexGrow: 1, fontSize: "1.1rem", lineHeight: 1.8 }}>
                                     {service.excerpt}
                                 </p>
+                                {/* CTA arrow — Terracotta */}
                                 <div
                                     className="flex items-center gap-2 mt-8 group-hover:gap-4 transition-all"
-                                    style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--color-wine)", fontWeight: 600 }}
+                                    style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B57B66", fontWeight: 600 }}
                                 >
                                     Learn More <span>→</span>
                                 </div>

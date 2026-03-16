@@ -34,10 +34,10 @@ function Dropdown({ items }) {
             transition={{ type: "spring", stiffness: 400, damping: 30, mass: 0.8 }}
             style={{
                 position: "absolute", top: "calc(100% + 0.75rem)", left: "50%", transform: "translateX(-50%)",
-                backgroundColor: "rgba(42, 54, 48,0.92)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
-                border: "1px solid rgba(222, 206, 191,0.12)",
+                backgroundColor: "rgba(61, 77, 68, 0.95)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
+                border: "1px solid rgba(222, 206, 191, 0.15)",
                 borderRadius: "1.25rem", minWidth: "280px", overflow: "hidden", zIndex: 200,
-                boxShadow: "0 25px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(222, 206, 191,0.06)",
+                boxShadow: "0 25px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(222, 206, 191, 0.08)",
                 padding: "0.5rem 0",
             }}
         >
@@ -51,19 +51,19 @@ function Dropdown({ items }) {
                     <Link to={item.href}
                         style={{
                             display: "flex", alignItems: "center", gap: "0.75rem",
-                            padding: "0.9rem 1.5rem", color: "rgba(244, 243, 241,0.7)",
+                            padding: "0.9rem 1.5rem", color: "rgba(244, 243, 241, 0.75)",
                             fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 500,
                             letterSpacing: "0.08em", textTransform: "uppercase",
                             transition: "all 0.2s ease", textDecoration: "none",
                             borderRadius: "0.75rem", margin: "0.15rem 0.5rem",
                         }}
                         onMouseOver={e => {
-                            e.currentTarget.style.color = "var(--color-cream)";
-                            e.currentTarget.style.backgroundColor = "rgba(222, 206, 191,0.12)";
+                            e.currentTarget.style.color = "#B57B66"; /* Terracotta hover */
+                            e.currentTarget.style.backgroundColor = "rgba(181, 123, 102, 0.1)";
                             e.currentTarget.style.paddingLeft = "1.75rem";
                         }}
                         onMouseOut={e => {
-                            e.currentTarget.style.color = "rgba(244, 243, 241,0.7)";
+                            e.currentTarget.style.color = "rgba(244, 243, 241, 0.75)";
                             e.currentTarget.style.backgroundColor = "transparent";
                             e.currentTarget.style.paddingLeft = "1.5rem";
                         }}
@@ -110,7 +110,7 @@ function NavItem({ link }) {
         >
             {link.children ? (
                 <button onClick={() => setOpen(v => !v)} style={base}
-                    onMouseOver={e => e.currentTarget.style.color = "var(--color-lilac)"}
+                    onMouseOver={e => e.currentTarget.style.color = "#B57B66"}
                     onMouseOut={e => e.currentTarget.style.color = "var(--color-cream)"}
                 >
                     {link.label}
@@ -124,7 +124,7 @@ function NavItem({ link }) {
                 </button>
             ) : (
                 <Link to={link.href} style={base}
-                    onMouseOver={e => e.currentTarget.style.color = "var(--color-lilac)"}
+                    onMouseOver={e => e.currentTarget.style.color = "#B57B66"}
                     onMouseOut={e => e.currentTarget.style.color = "var(--color-cream)"}
                 >
                     {link.label}
@@ -148,7 +148,7 @@ function NavLogo() {
                 </span>
                 <span style={{
                     fontFamily: "var(--font-sans)", fontSize: "0.6rem", fontWeight: 500,
-                    color: "var(--color-lilac)", letterSpacing: "0.2em", textTransform: "uppercase",
+                    color: "#DECEBF", letterSpacing: "0.2em", textTransform: "uppercase",
                 }}>
                     Psychological Services
                 </span>

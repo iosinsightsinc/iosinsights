@@ -20,21 +20,22 @@ function FloatingOrb({ size, x, y, color, delay, duration }) {
     );
 }
 
-/* Preset orb configurations for different section types */
+/* Cream/Blush preset — for use on Ivory or Blush sections */
 const creamPreset = [
-    { size: "140px", x: "5%",  y: "10%", color: "rgba(222, 206, 191,0.08)", delay: 0,   duration: 14 },
-    { size: "100px", x: "80%", y: "15%", color: "rgba(161, 167, 158,0.06)",   delay: 2,   duration: 11 },
-    { size: "80px",  x: "70%", y: "70%", color: "rgba(222, 206, 191,0.06)", delay: 1,   duration: 16 },
-    { size: "160px", x: "-3%", y: "60%", color: "rgba(161, 167, 158,0.05)",   delay: 3,   duration: 18 },
-    { size: "50px",  x: "45%", y: "85%", color: "rgba(222, 206, 191,0.05)", delay: 4,   duration: 10 },
+    { size: "140px", x: "5%",  y: "10%", color: "rgba(181, 123, 102, 0.06)", delay: 0,  duration: 14 }, /* Terracotta glow */
+    { size: "100px", x: "80%", y: "15%", color: "rgba(161, 167, 158, 0.07)", delay: 2,  duration: 11 }, /* Sage glow */
+    { size: "80px",  x: "70%", y: "70%", color: "rgba(222, 206, 191, 0.08)", delay: 1,  duration: 16 }, /* Blush glow */
+    { size: "160px", x: "-3%", y: "60%", color: "rgba(161, 167, 158, 0.05)", delay: 3,  duration: 18 }, /* Sage glow */
+    { size: "50px",  x: "45%", y: "85%", color: "rgba(181, 123, 102, 0.04)", delay: 4,  duration: 10 }, /* Terracotta glow */
 ];
 
+/* Wine/Evergreen preset — for use on Evergreen dark sections */
 const winePreset = [
-    { size: "160px", x: "5%",  y: "12%", color: "rgba(222, 206, 191,0.08)", delay: 0,   duration: 14 },
-    { size: "110px", x: "78%", y: "8%",  color: "rgba(244, 243, 241,0.04)", delay: 2,   duration: 11 },
-    { size: "85px",  x: "85%", y: "65%", color: "rgba(222, 206, 191,0.06)", delay: 1,   duration: 16 },
-    { size: "180px", x: "-5%", y: "55%", color: "rgba(181, 123, 102,0.1)",    delay: 3,   duration: 18 },
-    { size: "55px",  x: "40%", y: "80%", color: "rgba(244, 243, 241,0.03)", delay: 4,   duration: 10 },
+    { size: "160px", x: "5%",  y: "12%", color: "rgba(222, 206, 191, 0.07)", delay: 0,  duration: 14 }, /* Blush glow */
+    { size: "110px", x: "78%", y: "8%",  color: "rgba(244, 243, 241, 0.04)", delay: 2,  duration: 11 }, /* Ivory glow */
+    { size: "85px",  x: "85%", y: "65%", color: "rgba(222, 206, 191, 0.05)", delay: 1,  duration: 16 }, /* Blush glow */
+    { size: "180px", x: "-5%", y: "55%", color: "rgba(181, 123, 102, 0.08)", delay: 3,  duration: 18 }, /* Terracotta glow */
+    { size: "55px",  x: "40%", y: "80%", color: "rgba(244, 243, 241, 0.03)", delay: 4,  duration: 10 }, /* Ivory glow */
 ];
 
 export default function FloatingOrbs({ variant = "cream" }) {

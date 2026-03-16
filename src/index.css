@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── CSS Variable Mapping (Used in Tailwind & React) ── */
+  /* ── CSS Variable Mapping ── */
   --color-cream: var(--theme-cream);
   --color-cream-dark: var(--theme-cream-dark);
   --color-wine: var(--theme-wine);
@@ -16,16 +16,22 @@
 
 @layer base {
   :root {
-    /* EARTHY SAGE GREEN PALETTE */
-    --theme-cream: #F4F3F1; /* Ivory */
-    --theme-cream-dark: #EAE8E4; 
-    --theme-wine: #A1A79E; /* Sage (Mapped to --color-wine for primary hero/accents) */
-    --theme-wine-dark: #8C948B; 
-    --theme-lilac: #DECEBF; /* Blush */
-    --theme-lilac-dark: #B57B66; /* Terracotta */
-    --theme-navbar: #68756D; /* Evergreen (Navbar) */
-    --theme-text-dark: #2A3630; /* Darkened Evergreen for legible headings */
-    --theme-text-muted: #4A564F; /* Muted evergreen for body text */
+    /* ══ EARTHY SAGE GREEN PALETTE ══
+       Ivory:      #F4F3F1  → Page / card backgrounds
+       Blush:      #DECEBF  → Warm alt-section backgrounds, card bg, subtle borders
+       Sage:       #A1A79E  → Hero section background, large decorative areas
+       Terracotta: #B57B66  → Headings, buttons, links, accent text, labels
+       Evergreen:  #68756D  → Navbar, footer, body text, dark headings
+    */
+    --theme-cream: #F4F3F1;       /* Ivory — main page bg */
+    --theme-cream-dark: #DECEBF;  /* Blush — alt section bg (cards, warm sections) */
+    --theme-wine: #B57B66;        /* Terracotta — primary accent (buttons, links, accent headings) */
+    --theme-wine-dark: #9A6553;   /* Dark Terracotta — hover states */
+    --theme-lilac: #DECEBF;       /* Blush — secondary soft accent */
+    --theme-lilac-dark: #A1A79E;  /* Sage — subtle accents */
+    --theme-navbar: #4D5E55;      /* Deep Evergreen — navbar, footer */
+    --theme-text-dark: #B57B66;   /* Terracotta — large headings (elegant, warm emphasis) */
+    --theme-text-muted: #4D5E55;  /* Evergreen — body/paragraph text (high contrast on ivory) */
   }
 }
 
@@ -41,7 +47,7 @@
 
   body {
     background-color: var(--color-cream);
-    color: var(--color-text-dark);
+    color: var(--color-text-muted);
     --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, serif;
     --font-logo: "Outfit", ui-sans-serif, system-ui, -apple-system, sans-serif;
     --font-sans: "Poppins", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -54,13 +60,13 @@
     font-family: var(--font-serif);
     font-weight: 500;
     line-height: 1.15;
-    color: var(--color-text-dark);
+    color: var(--color-text-dark); /* Terracotta headings */
   }
 
   p {
     font-size: 1.3rem;
     line-height: 1.9;
-    color: var(--color-text-muted);
+    color: var(--color-text-muted); /* Evergreen body text */
   }
 
   ::selection {
@@ -70,11 +76,11 @@
 
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: var(--color-cream); }
-  ::-webkit-scrollbar-thumb { background: var(--color-lilac); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb { background: var(--color-wine); border-radius: 3px; }
 }
 
 @layer components {
-  /* ── Primary button: wine bg + white text (used on light backgrounds) ── */
+  /* ── Primary button: Terracotta bg + Ivory text ── */
   .btn-primary {
     display: inline-block;
     background-color: var(--color-wine);
@@ -95,10 +101,10 @@
   .btn-primary:hover {
     background-color: var(--color-wine-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -8px rgba(161, 167, 158, 0.45);
+    box-shadow: 0 10px 25px -8px rgba(181, 123, 102, 0.45);
   }
 
-  /* ── Light button: cream bg + wine text (used on dark backgrounds) ── */
+  /* ── Light button: Ivory bg + Terracotta text (on dark/sage backgrounds) ── */
   .btn-light {
     display: inline-block;
     background-color: var(--color-cream);
@@ -119,7 +125,7 @@
   .btn-light:hover {
     background-color: var(--color-white);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -8px rgba(222, 206, 191, 0.3);
+    box-shadow: 0 10px 25px -8px rgba(181, 123, 102, 0.3);
   }
 
   /* ── Outline button ── */
@@ -144,9 +150,10 @@
     background-color: var(--color-wine);
     color: var(--color-cream);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px -10px rgba(161, 167, 158, 0.35);
+    box-shadow: 0 10px 20px -10px rgba(181, 123, 102, 0.35);
   }
 
+  /* ── Section label: Terracotta, uppercase small caps ── */
   .section-label {
     font-family: var(--font-sans);
     font-size: 0.7rem;
@@ -156,6 +163,7 @@
     color: var(--color-wine);
   }
 
+  /* ── Divider bar in Terracotta ── */
   .divider {
     width: 3rem;
     height: 1.5px;
