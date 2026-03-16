@@ -138,21 +138,9 @@ function NavItem({ link }) {
 /* ── Animated Logo ── */
 function NavLogo() {
     return (
-        <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.85rem", textDecoration: "none", flexShrink: 0 }}>
-            <SpinningLogo size={45} variant="white" />
-            <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.1, gap: "0.1rem" }}>
-                <span style={{
-                    fontFamily: "var(--font-logo)", fontSize: "1.4rem", fontWeight: 500,
-                    color: "var(--color-cream)", letterSpacing: "0.01em",
-                }}>
-                    iOS Insights
-                </span>
-                <span style={{
-                    fontFamily: "var(--font-sans)", fontSize: "0.58rem", fontWeight: 500,
-                    color: "#DECEBF", letterSpacing: "0.18em", textTransform: "uppercase",
-                }}>
-                    Psychological Services
-                </span>
+        <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0, position: "relative", width: "80px", height: "80px", justifyContent: "center" }}>
+            <div style={{ position: "absolute", left: "-20px" }}>
+                <SpinningLogo size={120} variant="white" />
             </div>
         </Link>
     );
@@ -233,9 +221,10 @@ export default function Navbar() {
                         padding: "0.5rem 0.6rem 0.5rem 0.85rem",
                         boxShadow: "0 10px 50px rgba(0,0,0,0.4)",
                     }}>
-                        <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.65rem", textDecoration: "none" }}>
-                            <SpinningLogo size={34} variant="white" />
-                            <span style={{ fontFamily: "var(--font-logo)", fontSize: "1.15rem", color: "var(--color-cream)", fontWeight: 500 }}>iOS Insights</span>
+                        <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", position: "relative", width: "45px", height: "45px", justifyContent: "center" }}>
+                            <div style={{ position: "absolute", left: "-5px" }}>
+                                <SpinningLogo size={70} variant="white" />
+                            </div>
                         </Link>
                         <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
                             <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" style={{
