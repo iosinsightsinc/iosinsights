@@ -27,7 +27,7 @@ const approachPrinciples = [
     {
         icon: <Sparkles size={28} strokeWidth={1.5} />,
         title: "Warm Presence",
-        body: "My approach within sessions is to intentionally strive to provide a warm presence — to listen with care, to be open to diverse opinions and most importantly, to remember that resilience will amount from how I am with you."
+        body: "My approach within sessions is to intentionally strive to provide a warm presence — to listen with care, to be open to diverse opinions. Most importantly, I aim to create a warm and caring connection that helps provide positive emotional experiences. This shows how real change can happen when someone feels safe, understood, and secure in their relationships."
     },
     {
         icon: <BookOpen size={28} strokeWidth={1.5} />,
