@@ -15,33 +15,49 @@ A professional, high-end, and interactive web application built for **iOS Insigh
 
 Even if you aren't a developer, you can easily run this project and make updates by following these simple steps.
 
-### 1. Prerequisites
-Before you start, make sure you have the following installed on your computer:
-- **Node.js**: [Download and install here](https://nodejs.org/). This allows your computer to run the website.
-- **Git**: [Download and install here](https://git-scm.com/). This allows you to "push" your changes to the internet.
-- **A Code Editor**: I recommend [VS Code](https://code.visualstudio.com/).
+### 1. Prerequisites & Opening Your Terminal
+Before you start, you'll need a few free tools. Don't worry, you only have to do this once!
+
+- **Install Node.js**: [Download here](https://nodejs.org/). (Choose the "LTS" version).
+- **Install Git**: [Download here](https://git-scm.com/).
+- **Install VS Code**: [Download here](https://code.visualstudio.com/). This is the "Editor" where you will see the text.
+
+#### How to open your Terminal:
+The **Terminal** is a window where you type special commands.
+- **On a Mac**: Press `Command + Space`, type **"Terminal"**, and hit `Enter`.
+- **On Windows**: Press the `Start` key, type **"cmd"** or **"PowerShell"**, and hit `Enter`.
+
+---
 
 ### 2. Setup the Project
-1. Open your terminal (or Command Prompt).
-2. "Clone" the project by typing:
+Once your terminal is open, copy and paste these lines one by one (hit `Enter` after each):
+
+1. **Clone (Download) the project**:
    ```bash
    git clone https://github.com/sajeeban/iosinsights.git
    ```
-3. Enter the project folder:
+2. **Move into the folder**:
    ```bash
    cd iosinsights
    ```
-4. Install the necessary "ingredients" (dependencies):
+3. **Install the "Engine"**:
    ```bash
    npm install
    ```
 
-### 3. Run Locally (See changes as you work)
-To see the website on your own computer, run:
-```bash
-npm run dev
-```
-Once it starts, open your browser to `http://localhost:5173/`. Any changes you make to the code will show up here instantly!
+---
+
+### 3. Making Changes (The Fun Part)
+1. **Open the project in VS Code**:
+   - Open the **VS Code** app you downloaded.
+   - Go to `File > Open Folder...` and find the `iosinsights` folder you just created.
+2. **Run the local preview**:
+   - In your Terminal, type:
+     ```bash
+     npm run dev
+     ```
+   - Click the link it gives you (usually `http://localhost:5173`).
+   - Keep this terminal open! As you edit text in VS Code and save (`Command + S`), the website will update instantly in your browser.
 
 ---
 
