@@ -32,7 +32,7 @@ const approachPrinciples = [
     {
         icon: <BookOpen size={28} strokeWidth={1.5} />,
         title: "Holistic Perspective",
-        body: "My multifaceted and holistic perspective complements my ability to support in the healing of traumatic experiences and facilitate post-traumatic growth."
+        body: "My multifaceted and holistic perspective compliments my ability to support in the healing of traumatic experiences and facilitate post-traumatic growth."
     },
 ];
 
