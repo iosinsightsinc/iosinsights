@@ -138,9 +138,9 @@ function NavItem({ link }) {
 /* ── Animated Logo ── */
 function NavLogo() {
     return (
-        <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0, position: "relative", width: "80px", height: "80px", justifyContent: "center" }}>
-            <div style={{ position: "absolute", left: "-20px" }}>
-                <SpinningLogo size={120} variant="white" />
+        <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0, position: "relative", width: "60px", height: "60px", justifyContent: "center" }}>
+            <div style={{ position: "absolute", left: "-15px" }}>
+                <SpinningLogo size={100} variant="white" />
             </div>
         </Link>
     );
@@ -186,7 +186,7 @@ export default function Navbar() {
                     style={{
                         backgroundColor: "var(--color-navbar)", borderRadius: "9999px",
                         alignItems: "center", width: "100%", maxWidth: "1120px",
-                        padding: "0.65rem 0.75rem 0.65rem 1.75rem",
+                        padding: "0.45rem 0.6rem 0.45rem 1.5rem",
                         boxShadow: "0 10px 50px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.04)",
                     }}
                 >
@@ -218,12 +218,12 @@ export default function Navbar() {
                     <div style={{
                         backgroundColor: "var(--color-navbar)", borderRadius: "9999px",
                         display: "flex", alignItems: "center", justifyContent: "space-between",
-                        padding: "0.5rem 0.6rem 0.5rem 0.85rem",
+                        padding: "0.35rem 0.5rem 0.35rem 0.75rem",
                         boxShadow: "0 10px 50px rgba(0,0,0,0.4)",
                     }}>
-                        <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", position: "relative", width: "45px", height: "45px", justifyContent: "center" }}>
-                            <div style={{ position: "absolute", left: "-5px" }}>
-                                <SpinningLogo size={70} variant="white" />
+                        <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", position: "relative", width: "35px", height: "35px", justifyContent: "center" }}>
+                            <div style={{ position: "absolute", left: "-8px" }}>
+                                <SpinningLogo size={55} variant="white" />
                             </div>
                         </Link>
                         <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
