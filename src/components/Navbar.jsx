@@ -16,7 +16,6 @@ const navLinks = [
             { label: "Play Therapy", href: "/services/play" },
             { label: "Psychodiagnostic Assessments", href: "/services/assessments" },
             { label: "Vocational Support", href: "/services/vocational" },
-            { label: "Tele-assessments", href: "/services/tele-assessments" },
         ],
     },
     { label: "My Approach", href: "/approach" },

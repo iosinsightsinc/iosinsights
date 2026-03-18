@@ -51,12 +51,6 @@ const services = [
         excerpt: "Navigate career transitions, workplace stress, and find professional fulfillment and purpose.",
         link: "/services/vocational",
     },
-    {
-        category: "Virtual",
-        title: "Tele-assessments",
-        excerpt: "Accessible and rigorous psychological assessments conducted remotely for your convenience.",
-        link: "/services/tele-assessments",
-    },
 ];
 
 // EVERGREEN dark section background with Ivory cards

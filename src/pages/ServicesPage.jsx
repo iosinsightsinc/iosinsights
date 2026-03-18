@@ -61,13 +61,6 @@ const services = [
         tagline: "Empowering your professional journey.",
         excerpt: "We provide psychological support for workplace stress, career transitions, disability claims, and vocational rehabilitation — helping you thrive professionally.",
     },
-    {
-        slug: "tele-assessments",
-        icon: <Monitor size={32} strokeWidth={1.5} />,
-        title: "Tele-assessments",
-        tagline: "Professional assessments from the comfort of home.",
-        excerpt: "Access comprehensive psychological assessments remotely through secure, evidence-based tele-assessment protocols — reducing barriers to care across Alberta, Manitoba, and Saskatchewan.",
-    },
 ];
 
 export default function ServicesPage() {

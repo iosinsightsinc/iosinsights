@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ChevronDown } from "lucide-react";
 import SpinningLogo from "../components/SpinningLogo";
 import FloatingOrbs from "../components/FloatingOrbs";
 
@@ -203,10 +204,10 @@ We also work closely with parents and caregivers, providing guidance on how to s
         ],
     },
     assessments: {
-        title: "Psychological Assessments",
+        title: "Psychological & Tele-Assessments",
         subtitle: "Clarity for Your Path Forward",
         image: `${import.meta.env.BASE_URL}office-4.jpg`,
-        heroText: "Comprehensive psychological assessments that provide clear answers and actionable treatment recommendations.",
+        heroText: "Comprehensive psychological assessments, available both in-person and remotely, to provide clear answers and actionable, tailored treatment recommendations.",
         sections: [
             {
                 heading: "What Are Psychodiagnostic Assessments?",
@@ -215,10 +216,8 @@ We also work closely with parents and caregivers, providing guidance on how to s
 These assessments provide clarity for individuals who have been struggling without answers — whether it's understanding why you learn differently, why certain emotions feel overwhelming, or why relationships seem challenging.`,
             },
             {
-                heading: "What We Assess",
-                body: `Our assessments cover a wide range of concerns including ADHD, learning disabilities, autism spectrum conditions, anxiety and depressive disorders, personality assessments, giftedness evaluations, and neurocognitive functioning.
-
-Each assessment is tailored to your specific referral question. We don't use a one-size-fits-all battery — instead, we select evidence-based measures that will provide the most useful and actionable information for your situation.`,
+                heading: "Accessible Care Through Tele-assessments",
+                body: `Geography, mobility, and scheduling shouldn't stand between you and the psychological support you need. We offer rigorous, evidence-based tele-assessment services across Alberta, Manitoba, and Saskatchewan. Through a combination of secure video-based clinical interviews and online standardized testing platforms, we maintain the highest standards of psychological assessment while bringing care directly to the comfort of your home.`,
             },
             {
                 heading: "The Value of a Clear Diagnosis",
@@ -227,13 +226,31 @@ Each assessment is tailored to your specific referral question. We don't use a o
 You'll receive a detailed written report with specific, practical recommendations — not just a diagnosis, but a plan forward.`,
             },
         ],
+        specificAssessments: [
+            {
+                title: "ADHD & Attention Assessments",
+                content: "Comprehensive evaluations to identify Attention-Deficit/Hyperactivity Disorder (ADHD) and related executive functioning challenges. We assess attention, hyperactivity, impulsivity, and cognitive strengths to provide a clear diagnosis and targeted intervention strategies for work, school, and daily life.",
+            },
+            {
+                title: "Learning & Psychoeducational Assessments",
+                content: "Detailed testing to uncover specific learning disorders, cognitive strengths, and academic challenges. This assessment is crucial for securing academic accommodations, understanding distinct learning profiles, and developing effective, personalized educational plans.",
+            },
+            {
+                title: "Autism Spectrum Evaluations",
+                content: "Nuanced, neurodiversity-affirming assessments designed to identify autism spectrum conditions across the lifespan. We focus on understanding your unique social, communication, and sensory processing patterns rather than deficit-based models.",
+            },
+            {
+                title: "Add your own custom assessment here",
+                content: "You can easily add new types of assessments by copying this format in the code.",
+            },
+        ],
         howItWorks: [
-            "Initial intake interview to understand your concerns and referral questions.",
-            "Administer standardized psychological tests tailored to your needs.",
-            "Clinical observation and behavioural assessment.",
-            "Comprehensive analysis and interpretation of results.",
-            "Detailed written report with diagnosis and actionable recommendations.",
-            "Feedback session to discuss results and plan next steps.",
+            "Schedule a free 15-minute consultation to discuss your needs and assessment format (in-person or remote).",
+            "Initial intake interview to clarify concerns and tailor the assessment plan.",
+            "Administer standardized psychological tests via clinic or secure online platforms.",
+            "Clinical observation and in-depth behavioural assessment.",
+            "Detailed written report featuring diagnoses and actionable recommendations.",
+            "Collaborative feedback session to discuss results and outline next steps.",
         ],
     },
     vocational: {
@@ -268,40 +285,7 @@ For those dealing with workplace injury or disability, we provide psychological 
             "Ongoing therapeutic support for workplace mental health.",
         ],
     },
-    "tele-assessments": {
-        title: "Tele-assessments",
-        subtitle: "Remote Psychological Care",
-        image: `${import.meta.env.BASE_URL}service-tele-assessments.png`,
-        heroText: "Access comprehensive psychological assessments from the comfort of your home through secure, evidence-based protocols.",
-        sections: [
-            {
-                heading: "Breaking Down Barriers to Care",
-                body: `Geography, mobility, and scheduling shouldn't stand between you and the psychological support you need. Our tele-assessment services bring comprehensive psychological evaluation directly to you through secure video platforms.
 
-As a registered psychologist across Alberta, Manitoba, and Saskatchewan, Iso provides accessible assessment services to individuals who may face barriers to in-person care — whether due to rural location, disability, health concerns, or personal preference.`,
-            },
-            {
-                heading: "How Tele-assessments Work",
-                body: `Tele-assessments use the same rigorous, evidence-based protocols as in-person assessments, adapted for secure virtual delivery. Through a combination of video-based clinical interviews, online standardized testing platforms, and mailed assessment materials, we ensure a thorough and valid evaluation.
-
-Our approach maintains the highest standards of psychological assessment while offering the convenience and accessibility of remote service delivery.`,
-            },
-            {
-                heading: "What You'll Need",
-                body: `All you need is a stable internet connection, a quiet private space, and a computer with a camera and microphone. We'll guide you through the technical setup and ensure you're comfortable before beginning.
-
-You'll receive the same comprehensive written report and feedback session as our in-person clients, with results delivered securely and privately.`,
-            },
-        ],
-        howItWorks: [
-            "Schedule a free 15-minute telephone consultation to discuss your needs.",
-            "Receive a technical setup guide and secure platform access.",
-            "Complete clinical interviews via secure video connection.",
-            "Standardized testing administered through validated online platforms.",
-            "Comprehensive report prepared with diagnosis and recommendations.",
-            "Feedback session delivered via secure video to discuss your results.",
-        ],
-    },
 };
 
 export default function ServicePage() {
@@ -413,7 +397,76 @@ export default function ServicePage() {
                         ))}
                     </motion.div>
                 ))}
+                {/* Specific Assessments Accordion (only renders if applicable) */}
+                {service.specificAssessments && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="space-y-6 pt-8 pb-12"
+                    >
+                        <h2 style={{
+                            fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)",
+                            color: "var(--color-text-dark)", lineHeight: 1.2, marginBottom: "2rem"
+                        }}>
+                            What We Assess For
+                        </h2>
 
+                        <div className="space-y-4">
+                            {service.specificAssessments.map((assessment, index) => {
+                                const isOpen = openAssessment === index;
+                                return (
+                                    <div
+                                        key={index}
+                                        style={{
+                                            backgroundColor: "var(--color-cream-dark)",
+                                            borderRadius: "1rem", border: "1px solid rgba(217, 187, 186,0.2)",
+                                            overflow: "hidden"
+                                        }}
+                                    >
+                                        <button
+                                            onClick={() => setOpenAssessment(isOpen ? null : index)}
+                                            className="w-full flex justify-between items-center p-6 text-left"
+                                            style={{ transition: "background-color 0.2s" }}
+                                            onMouseOver={(e) => e.currentTarget.style.backgroundColor = "rgba(42, 23, 25, 0.02)"}
+                                            onMouseOut={(e) => e.currentTarget.style.backgroundColor = "transparent"}
+                                        >
+                                            <h4 style={{
+                                                color: "var(--color-text-dark)", fontSize: "1.25rem",
+                                                fontWeight: 500, fontFamily: "var(--font-sans)"
+                                            }}>
+                                                {assessment.title}
+                                            </h4>
+                                            <motion.div
+                                                animate={{ rotate: isOpen ? 180 : 0 }}
+                                                transition={{ duration: 0.3 }}
+                                                style={{ color: "var(--color-wine)" }}
+                                            >
+                                                <ChevronDown size={24} />
+                                            </motion.div>
+                                        </button>
+                                        <motion.div
+                                            initial={false}
+                                            animate={{
+                                                height: isOpen ? "auto" : 0,
+                                                opacity: isOpen ? 1 : 0
+                                            }}
+                                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                                        >
+                                            <div className="px-6 pb-6 text-left">
+                                                <div style={{ height: "1px", backgroundColor: "rgba(217, 187, 186,0.3)", marginBottom: "1.5rem" }} />
+                                                <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", lineHeight: 1.8, fontWeight: 300 }}>
+                                                    {assessment.content}
+                                                </p>
+                                            </div>
+                                        </motion.div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </motion.div>
+                )}
                 {/* How it works */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
