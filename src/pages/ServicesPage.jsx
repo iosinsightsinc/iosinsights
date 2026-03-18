@@ -50,9 +50,9 @@ const services = [
     {
         slug: "assessments",
         icon: <ClipboardList size={32} strokeWidth={1.5} />,
-        title: "Psychodiagnostic Assessments",
+        title: "Assessments",
         tagline: "Clarity through comprehensive evaluation.",
-        excerpt: "Our thorough psychodiagnostic assessments identify cognitive, emotional, and behavioural patterns to provide clear diagnoses and actionable treatment recommendations.",
+        excerpt: "Our thorough psychological assessments identify cognitive, emotional, and behavioural patterns to provide clear diagnoses and actionable treatment recommendations.",
     },
     {
         slug: "vocational",

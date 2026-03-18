@@ -41,7 +41,7 @@ const services = [
     },
     {
         category: "Assessments",
-        title: "Psychodiagnostic Assessments",
+        title: "Assessments",
         excerpt: "Gain clarity through comprehensive psychological evaluations to better understand your unique mind.",
         link: "/services/assessments",
     },

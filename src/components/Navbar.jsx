@@ -14,7 +14,7 @@ const navLinks = [
             { label: "Sandtray Therapy", href: "/services/sandtray" },
             { label: "Trauma Therapy", href: "/services/trauma" },
             { label: "Play Therapy", href: "/services/play" },
-            { label: "Psychodiagnostic Assessments", href: "/services/assessments" },
+            { label: "Assessments", href: "/services/assessments" },
             { label: "Vocational Support", href: "/services/vocational" },
         ],
     },

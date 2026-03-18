@@ -51,7 +51,7 @@ export default function Footer() {
                             ["Therapy for Depression", "/services/depression"],
                             ["Trauma Therapy", "/services/trauma"],
                             ["Play Therapy", "/services/play"],
-                            ["Psychodiagnostic Assessments", "/services/assessments"],
+                            ["Assessments", "/services/assessments"],
                             ["Vocational Support", "/services/vocational"],
                         ].map(([label, href]) => (
                             <li key={label}>
