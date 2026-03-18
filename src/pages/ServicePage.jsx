@@ -288,7 +288,7 @@ For those dealing with workplace injury or disability, we provide psychological 
     workshops: {
         title: "Workshops & Therapeutic Groups",
         subtitle: "Healing in Community",
-        image: `${import.meta.env.BASE_URL}office-1.jpg`,
+        image: `${import.meta.env.BASE_URL}service-workshops.png`,
         heroText: "Connect with others who share similar experiences. Our psychoeducational groups and virtual workshops are designed to foster shared understanding and collective growth.",
         sections: [
             {
