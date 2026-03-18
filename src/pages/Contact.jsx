@@ -5,7 +5,7 @@ import FloatingOrbs from "../components/FloatingOrbs";
 export default function Contact() {
     return (
         <div style={{ backgroundColor: "var(--color-cream)", position: "relative", overflow: "hidden" }} className="w-full py-24 px-6">
-            <FloatingOrbs variant="cream" />
+            <FloatingOrbs variant="sage" />
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
 
                 {/* Left Side: Info */}

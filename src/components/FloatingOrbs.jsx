@@ -38,8 +38,20 @@ const winePreset = [
     { size: "55px",  x: "40%", y: "80%", color: "rgba(244, 243, 241, 0.03)", delay: 4,  duration: 10 }, /* Ivory glow */
 ];
 
+/* Sage preset — soft green orbs exclusively, for use on light/Ivory backgrounds */
+const sagePreset = [
+    { size: "150px", x: "8%",  y: "10%", color: "rgba(161, 167, 158, 0.15)", delay: 0,  duration: 15 }, /* Sage glow */
+    { size: "200px", x: "75%", y: "20%", color: "rgba(161, 167, 158, 0.1)",  delay: 2,  duration: 18 }, /* Sage glow */
+    { size: "90px",  x: "85%", y: "75%", color: "rgba(161, 167, 158, 0.12)", delay: 1,  duration: 12 }, /* Sage glow */
+    { size: "180px", x: "-2%", y: "65%", color: "rgba(161, 167, 158, 0.14)", delay: 3,  duration: 16 }, /* Sage glow */
+    { size: "60px",  x: "40%", y: "85%", color: "rgba(161, 167, 158, 0.08)", delay: 4,  duration: 11 }, /* Sage glow */
+];
+
 export default function FloatingOrbs({ variant = "cream" }) {
-    const orbs = variant === "wine" ? winePreset : creamPreset;
+    let orbs = creamPreset;
+    if (variant === "wine") orbs = winePreset;
+    if (variant === "sage") orbs = sagePreset;
+
     return (
         <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none" }}>
             {orbs.map((orb, i) => (

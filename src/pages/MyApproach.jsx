@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SpinningLogo from "../components/SpinningLogo";
+import FloatingOrbs from "../components/FloatingOrbs";
 import { CheckCircle2, Heart, Brain, Shield, Users, Sparkles, BookOpen, ChevronDown } from "lucide-react";
 
 const approachPrinciples = [
@@ -67,7 +68,8 @@ export default function MyApproach() {
     const [openInProgress, setOpenInProgress] = useState(null);
 
     return (
-        <div style={{ backgroundColor: "var(--color-cream)" }} className="w-full pt-28">
+        <div style={{ backgroundColor: "var(--color-cream)", position: "relative", overflow: "hidden" }} className="w-full pt-28">
+            <FloatingOrbs variant="sage" />
 
             {/* Hero Banner — Wine with photo */}
             <motion.div

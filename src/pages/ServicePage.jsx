@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
 import SpinningLogo from "../components/SpinningLogo";
+import FloatingOrbs from "../components/FloatingOrbs";
 
 const servicesData = {
     depression: {
@@ -318,7 +319,8 @@ export default function ServicePage() {
     }
 
     return (
-        <div style={{ backgroundColor: "var(--color-cream)" }} className="w-full pt-20">
+        <div style={{ backgroundColor: "var(--color-cream)", position: "relative", overflow: "hidden" }} className="w-full pt-20">
+            <FloatingOrbs variant="sage" />
 
             {/* Hero Banner — Wine */}
             <motion.div
