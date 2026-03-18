@@ -300,16 +300,20 @@ For those dealing with workplace injury or disability, we provide psychological 
         ],
         specificAssessments: [
             {
-                title: "Psychoeducational Groups (Coming Soon)",
+                title: "Psychoeducational Groups",
                 content: "More information coming soon. Check back later for updates.",
             },
             {
-                title: "Virtual Groups / Workshops (Coming Soon)",
+                title: "Virtual Groups / Workshops",
                 content: "More information coming soon. Check back later for updates.",
             },
             {
-                title: "Parent Groups (Coming Soon)",
+                title: "Parent Groups",
                 content: "More information coming soon. Check back later for updates.",
+            },
+            {
+                title: "More Coming Soon...",
+                content: "Additional group offerings will be announced shortly. Check back later for updates.",
             },
         ],
         howItWorks: [
