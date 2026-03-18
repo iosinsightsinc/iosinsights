@@ -204,7 +204,7 @@ We also work closely with parents and caregivers, providing guidance on how to s
         ],
     },
     assessments: {
-        title: "Psychological & Tele-Assessments",
+        title: "Assessments",
         subtitle: "Clarity for Your Path Forward",
         image: `${import.meta.env.BASE_URL}office-4.jpg`,
         heroText: "Comprehensive psychological assessments, available both in-person and remotely, to provide clear answers and actionable, tailored treatment recommendations.",
