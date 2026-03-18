@@ -49,6 +49,9 @@ export default function Footer() {
                     <ul className="space-y-3">
                         {[
                             ["Therapy for Depression", "/services/depression"],
+                            ["Therapy for Anxiety", "/services/anxiety"],
+                            ["Attachment Therapy", "/services/attachment"],
+                            ["Sandtray Therapy", "/services/sandtray"],
                             ["Trauma Therapy", "/services/trauma"],
                             ["Play Therapy", "/services/play"],
                             ["Assessments", "/services/assessments"],
