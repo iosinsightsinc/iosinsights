@@ -109,13 +109,7 @@ export default function MyApproach() {
                         transition={{ duration: 1, delay: 0.3 }}
                         className="text-center md:text-left"
                     >
-                        <p style={{
-                            fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
-                            letterSpacing: "0.2em", textTransform: "uppercase",
-                            color: "#C4A98A", marginBottom: "1.5rem",
-                        }}>
-                            How I Work
-                        </p>
+
                         <h1 style={{
                             fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
                             color: "var(--color-cream)", lineHeight: 1.1,
