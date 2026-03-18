@@ -322,44 +322,47 @@ export default function ServicePage() {
         <div style={{ backgroundColor: "var(--color-cream)", position: "relative", overflow: "hidden" }} className="w-full pt-20">
             <FloatingOrbs variant="sage" />
 
-            {/* Hero Banner — Wine */}
+            {/* Hero Banner */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundColor: "#A1A79E", padding: "4rem 1.5rem" }}
+                style={{ backgroundColor: "#A1A79E", padding: "4rem 1.5rem", position: "relative", overflow: "hidden" }}
                 className="text-center"
             >
-                <p style={{
-                    fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
-                    letterSpacing: "0.2em", textTransform: "uppercase",
-                    color: "#B57B66", marginBottom: "1.5rem",
-                }}>
-                    Specialized Therapy
-                </p>
-                <h1 style={{
-                    fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
-                    color: "var(--color-cream)", lineHeight: 1.1,
-                    maxWidth: "800px", margin: "0 auto 0.75rem",
-                }}>
-                    {service.title}
-                </h1>
-                <p style={{
-                    fontFamily: "var(--font-serif)", fontSize: "1.3rem", fontStyle: "italic",
-                    color: "rgba(252, 246, 242,0.5)", marginBottom: "2rem",
-                }}>
-                    {service.subtitle}
-                </p>
-                <p style={{
-                    color: "rgba(252, 246, 242,0.7)", fontWeight: 400,
-                    maxWidth: "560px", margin: "0 auto 3rem",
-                    fontSize: "1.2rem", lineHeight: 1.9
-                }}>
-                    {service.heroText}
-                </p>
-                <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" className="btn-light">
-                    Connect with Me
-                </a>
+                <FloatingOrbs variant="cream" />
+                <div className="relative z-10">
+                    <p style={{
+                        fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
+                        letterSpacing: "0.2em", textTransform: "uppercase",
+                        color: "#B57B66", marginBottom: "1.5rem",
+                    }}>
+                        Specialized Therapy
+                    </p>
+                    <h1 style={{
+                        fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
+                        color: "var(--color-cream)", lineHeight: 1.1,
+                        maxWidth: "800px", margin: "0 auto 0.75rem",
+                    }}>
+                        {service.title}
+                    </h1>
+                    <p style={{
+                        fontFamily: "var(--font-serif)", fontSize: "1.3rem", fontStyle: "italic",
+                        color: "rgba(252, 246, 242,0.5)", marginBottom: "2rem",
+                    }}>
+                        {service.subtitle}
+                    </p>
+                    <p style={{
+                        color: "rgba(252, 246, 242,0.7)", fontWeight: 400,
+                        maxWidth: "560px", margin: "0 auto 3rem",
+                        fontSize: "1.2rem", lineHeight: 1.9
+                    }}>
+                        {service.heroText}
+                    </p>
+                    <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" className="btn-light inline-block">
+                        Connect with Me
+                    </a>
+                </div>
             </motion.div>
 
             {/* Service Image */}

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Smartphone, ExternalLink, Star, Brain, Moon, Sparkles, Heart, Shield, Activity } from "lucide-react";
 import SpinningLogo from "../components/SpinningLogo";
+import FloatingOrbs from "../components/FloatingOrbs";
 
 const mentalHealthApps = [
     {
@@ -82,38 +83,42 @@ const sortedApp = {
 
 export default function Resources() {
     return (
-        <div style={{ backgroundColor: "var(--color-cream)" }} className="w-full pt-28">
+        <div style={{ backgroundColor: "var(--color-cream)", position: "relative", overflow: "hidden" }} className="w-full pt-28">
+            <FloatingOrbs variant="sage" />
 
-            {/* Hero Banner — Wine */}
+            {/* Hero Banner */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundColor: "#A1A79E", padding: "6rem 1.5rem" }}
+                style={{ backgroundColor: "#A1A79E", padding: "6rem 1.5rem", position: "relative", overflow: "hidden" }}
                 className="text-center"
             >
-                <p style={{
-                    fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
-                    letterSpacing: "0.2em", textTransform: "uppercase",
-                    color: "#B57B66", marginBottom: "1.5rem",
-                }}>
-                    Mental Health Resources
-                </p>
-                <h1 style={{
-                    fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
-                    color: "var(--color-cream)", lineHeight: 1.1,
-                    maxWidth: "800px", margin: "0 auto 2rem",
-                }}>
-                    Tools to Support <br />
-                    <em style={{ color: "#B57B66" }}>Your Journey</em>
-                </h1>
-                <p style={{
-                    color: "rgba(252, 246, 242,0.7)", fontWeight: 400,
-                    maxWidth: "600px", margin: "0 auto",
-                    fontSize: "1.2rem", lineHeight: 1.9
-                }}>
-                    Mental health apps provide accessible tools to support emotional well-being, offering features like mood tracking, therapy techniques, mindfulness exercises, and personalized care plans.
-                </p>
+                <FloatingOrbs variant="cream" />
+                <div className="relative z-10">
+                    <p style={{
+                        fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
+                        letterSpacing: "0.2em", textTransform: "uppercase",
+                        color: "#B57B66", marginBottom: "1.5rem",
+                    }}>
+                        Mental Health Resources
+                    </p>
+                    <h1 style={{
+                        fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
+                        color: "var(--color-cream)", lineHeight: 1.1,
+                        maxWidth: "800px", margin: "0 auto 2rem",
+                    }}>
+                        Tools to Support <br />
+                        <em style={{ color: "#B57B66" }}>Your Journey</em>
+                    </h1>
+                    <p style={{
+                        color: "rgba(252, 246, 242,0.7)", fontWeight: 400,
+                        maxWidth: "600px", margin: "0 auto",
+                        fontSize: "1.2rem", lineHeight: 1.9
+                    }}>
+                        Mental health apps provide accessible tools to support emotional well-being, offering features like mood tracking, therapy techniques, mindfulness exercises, and personalized care plans.
+                    </p>
+                </div>
             </motion.div>
 
             {/* Featured: Sorted Mental Health */}

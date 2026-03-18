@@ -9,14 +9,6 @@ const credentials = [
     "NIHB-Approved Provider — Alberta & Nova Scotia",
 ];
 
-const specialties = [
-    "Trauma-Informed Therapy",
-    "Emotion-Focused Therapy",
-    "Internal Family Systems (IFS)",
-    "Somatic Therapy",
-    "Play Therapy",
-    "Acceptance & Commitment (ACT)",
-];
 
 // BLUSH warm alt section for the About/Approach section on homepage
 export default function AboutMe() {
@@ -110,19 +102,6 @@ export default function AboutMe() {
                             </p>
                         </div>
 
-                        {/* Specialty pills — Terracotta */}
-                        <div className="flex flex-wrap gap-2 pt-2">
-                            {specialties.map((s, i) => (
-                                <span key={i} style={{
-                                    backgroundColor: "rgba(181, 123, 102, 0.1)", color: "#B57B66",
-                                    border: "1px solid rgba(181, 123, 102, 0.25)",
-                                    fontSize: "0.7rem", letterSpacing: "0.1em", fontWeight: 600,
-                                    padding: "0.4rem 1rem", borderRadius: "9999px", textTransform: "uppercase",
-                                }}>
-                                    {s}
-                                </span>
-                            ))}
-                        </div>
 
                         <div className="flex items-center gap-6 pt-4">
                             <Link to="/approach" className="btn-primary">Read My Approach</Link>

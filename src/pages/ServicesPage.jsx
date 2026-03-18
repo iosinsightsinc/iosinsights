@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import SpinningLogo from "../components/SpinningLogo";
 import { Heart, Brain, Puzzle, ClipboardList, Briefcase, Monitor, ArrowRight, Wind, Users, Box } from "lucide-react";
+import FloatingOrbs from "../components/FloatingOrbs";
 
 const services = [
     {
@@ -71,38 +72,42 @@ const services = [
 
 export default function ServicesPage() {
     return (
-        <div style={{ backgroundColor: "var(--color-cream)", minHeight: "100vh" }} className="w-full pt-24 pb-20">
+        <div style={{ backgroundColor: "var(--color-cream)", minHeight: "100vh", position: "relative", overflow: "hidden" }} className="w-full pt-24 pb-20">
+            <FloatingOrbs variant="sage" />
 
-            {/* Hero Banner — Wine */}
+            {/* Hero Banner */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundColor: "#A1A79E", padding: "4rem 1.5rem" }}
+                style={{ backgroundColor: "#A1A79E", padding: "4rem 1.5rem", position: "relative", overflow: "hidden" }}
                 className="text-center"
             >
-                <p style={{
-                    fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
-                    letterSpacing: "0.2em", textTransform: "uppercase",
-                    color: "#B57B66", marginBottom: "1.5rem",
-                }}>
-                    What We Offer
-                </p>
-                <h1 style={{
-                    fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
-                    color: "var(--color-cream)", lineHeight: 1.1,
-                    maxWidth: "800px", margin: "0 auto 2rem",
-                }}>
-                    Specialized Therapy <br />
-                    <em style={{ color: "#B57B66" }}>for Every Thread of You</em>
-                </h1>
-                <p style={{
-                    color: "rgba(252, 246, 242,0.7)", fontWeight: 400,
-                    maxWidth: "560px", margin: "0 auto",
-                    fontSize: "1.2rem", lineHeight: 1.9
-                }}>
-                    Each service is deep, empathetic, and tailored specifically to your unique mental landscape. We don't treat symptoms — we unravel causes.
-                </p>
+                <FloatingOrbs variant="cream" />
+                <div className="relative z-10">
+                    <p style={{
+                        fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600,
+                        letterSpacing: "0.2em", textTransform: "uppercase",
+                        color: "#B57B66", marginBottom: "1.5rem",
+                    }}>
+                        What We Offer
+                    </p>
+                    <h1 style={{
+                        fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
+                        color: "var(--color-cream)", lineHeight: 1.1,
+                        maxWidth: "800px", margin: "0 auto 2rem",
+                    }}>
+                        Specialized Therapy <br />
+                        <em style={{ color: "#B57B66" }}>for Every Thread of You</em>
+                    </h1>
+                    <p style={{
+                        color: "rgba(252, 246, 242,0.7)", fontWeight: 400,
+                        maxWidth: "560px", margin: "0 auto",
+                        fontSize: "1.2rem", lineHeight: 1.9
+                    }}>
+                        Each service is deep, empathetic, and tailored specifically to your unique mental landscape. We don't treat symptoms — we unravel causes.
+                    </p>
+                </div>
             </motion.div>
 
             {/* Service Cards Grid */}

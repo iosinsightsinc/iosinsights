@@ -37,6 +37,15 @@ const approachPrinciples = [
     },
 ];
 
+const specialties = [
+    "Trauma-Informed Therapy",
+    "Emotion-Focused Therapy",
+    "Internal Family Systems (IFS)",
+    "Somatic Therapy",
+    "Play Therapy",
+    "Acceptance & Commitment (ACT)",
+];
+
 const therapyModalities = [
     { title: "Emotion-Focused Therapy (EFT)", content: "Content for Emotion-Focused Therapy will go here." },
     { title: "Somatic Therapy", content: "Content for Somatic Therapy will go here." },
@@ -71,14 +80,15 @@ export default function MyApproach() {
         <div style={{ backgroundColor: "var(--color-cream)", position: "relative", overflow: "hidden" }} className="w-full pt-28">
             <FloatingOrbs variant="sage" />
 
-            {/* Hero Banner — Wine with photo */}
+            {/* Hero Banner */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundColor: "#A1A79E", padding: "5rem 1.5rem" }}
+                style={{ backgroundColor: "#A1A79E", padding: "5rem 1.5rem", position: "relative", overflow: "hidden" }}
             >
-                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <FloatingOrbs variant="cream" />
+                <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {/* Photo */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -186,10 +196,11 @@ export default function MyApproach() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundColor: "var(--color-wine)" }}
+                style={{ backgroundColor: "var(--color-wine)", position: "relative", overflow: "hidden" }}
                 className="py-20 px-6 text-center"
             >
-                <div className="max-w-4xl mx-auto">
+                <FloatingOrbs variant="wine" />
+                <div className="relative z-10 max-w-4xl mx-auto">
                     <span style={{ fontFamily: "var(--font-serif)", fontSize: "6rem", color: "var(--color-lilac)", lineHeight: 0.5, display: "block", marginBottom: "1rem", opacity: 0.5 }}>"</span>
                     <p style={{
                         fontFamily: "var(--font-serif)", fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
@@ -225,9 +236,23 @@ export default function MyApproach() {
                     <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
                         I use a mix of humor, education, and structured approaches like Emotion-Focused Therapy and ACT. I also draw a lot on somatic therapy and attachment theory. One metaphor I often use is to imagine the self like a house. Your earliest attachments — the relationships that helped form your nervous system and sense of self — are like the foundation. If there were cracks in that foundation, it can show up later as issues in the ‘upper floors’: relationships, emotional regulation, confidence, decision-making, etc.
                     </p>
-                    <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9 }}>
+                    <p style={{ color: "var(--color-text-muted)", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9, marginBottom: "2rem" }}>
                         Sometimes we end up spending years trying to patch up those upper floors — but real change happens when we slowly and safely go down into the basement, where those original patterns or beliefs live, and start doing the core repairs. That’s where we begin shifting what’s called your internal working model — which is just a fancy way of saying the mental blueprint that has been formed in your mind and informs how you expect the world to treat you, and how you believe you’re allowed to show up in it.
                     </p>
+
+                    {/* Specialty pills — Terracotta */}
+                    <div className="flex flex-wrap gap-2 pt-2">
+                        {specialties.map((s, i) => (
+                            <span key={i} style={{
+                                backgroundColor: "rgba(181, 123, 102, 0.1)", color: "#B57B66",
+                                border: "1px solid rgba(181, 123, 102, 0.25)",
+                                fontSize: "0.7rem", letterSpacing: "0.1em", fontWeight: 600,
+                                padding: "0.4rem 1rem", borderRadius: "9999px", textTransform: "uppercase",
+                            }}>
+                                {s}
+                            </span>
+                        ))}
+                    </div>
                 </motion.div>
             </div>
 

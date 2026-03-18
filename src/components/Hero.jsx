@@ -130,7 +130,7 @@ export default function Hero() {
                             marginBottom: "1.5rem",
                         }}
                     >
-                        Accessing support is not a sign of weakness — it is a sign of self-love. 🤍
+                        Seeking support isn’t weakness — it’s how we reconnect with ourselves and each other. Sometimes the strongest step is letting someone walk beside you. 🤍
                     </motion.p>
 
                     {/* Location Badges */}
