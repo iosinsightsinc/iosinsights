@@ -285,6 +285,41 @@ For those dealing with workplace injury or disability, we provide psychological 
             "Ongoing therapeutic support for workplace mental health.",
         ],
     },
+    workshops: {
+        title: "Workshops & Therapeutic Groups",
+        subtitle: "Healing in Community",
+        image: `${import.meta.env.BASE_URL}media__1773357009023.jpg`,
+        heroText: "Connect with others who share similar experiences. Our psychoeducational groups and virtual workshops are designed to foster shared understanding and collective growth.",
+        sections: [
+            {
+                heading: "The Power of Shared Experience",
+                body: `There is profound healing in realizing you are not alone. Group therapy and psychoeducational workshops offer a unique environment where you can learn evidence-based skills while connecting with others navigating similar challenges.
+                
+                Whether you're looking to understand a new diagnosis, learn practical emotional regulation tools, or find a community of supportive peers, our group sessions provide a safe, structured space for collective healing.`,
+            },
+        ],
+        specificAssessments: [
+            {
+                title: "Psychoeducational Groups",
+                content: "More information coming soon. Check back later for updates.",
+            },
+            {
+                title: "Virtual Groups / Workshops",
+                content: "More information coming soon. Check back later for updates.",
+            },
+            {
+                title: "Parent Groups",
+                content: "More information coming soon. Check back later for updates.",
+            },
+        ],
+        howItWorks: [
+            "Check this page for upcoming group schedules and registration.",
+            "Complete a brief intake to ensure the group is the right fit.",
+            "Engage in structured, facilitator-led psychoeducational sessions.",
+            "Connect with peers in a safe, confidential environment.",
+            "Take away practical skills and workbooks for ongoing practice.",
+        ],
+    },
 
 };
 
@@ -411,7 +446,7 @@ export default function ServicePage() {
                             fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)",
                             color: "var(--color-text-dark)", lineHeight: 1.2, marginBottom: "2rem"
                         }}>
-                            What We Assess For
+                            {slug === "workshops" ? "Upcoming Groups & Workshops" : "What We Assess For"}
                         </h2>
 
                         <div className="space-y-4">

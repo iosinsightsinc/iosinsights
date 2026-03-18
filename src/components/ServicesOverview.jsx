@@ -16,13 +16,13 @@ const services = [
         link: "/services/anxiety"
     },
     {
-        category: "Therapy",
+        category: "Individual Therapy",
         title: "Attachment Therapy",
         excerpt: "Build the relationships you want. Shift long-standing beliefs held in mind and body.",
         link: "/services/attachment"
     },
     {
-        category: "Therapy",
+        category: "Individual Therapy",
         title: "Trauma Therapy",
         excerpt: "Safely process past experiences and regulate your nervous system to restore inner peace.",
         link: "/services/trauma",
@@ -34,7 +34,7 @@ const services = [
         link: "/services/play",
     },
     {
-        category: "Therapy",
+        category: "Individual Therapy",
         title: "Sandtray Therapy",
         excerpt: "Process what words cannot capture. A hands-on tool to safely map and explore your inner world.",
         link: "/services/sandtray",
@@ -50,6 +50,12 @@ const services = [
         title: "Vocational Support",
         excerpt: "Navigate career transitions, workplace stress, and find professional fulfillment and purpose.",
         link: "/services/vocational",
+    },
+    {
+        category: "Group Support",
+        title: "Workshops & Therapeutic Groups",
+        excerpt: "Connect and heal in community through structured psychoeducational and therapeutic group offerings.",
+        link: "/services/workshops",
     },
 ];
 

@@ -61,6 +61,13 @@ const services = [
         tagline: "Empowering your professional journey.",
         excerpt: "We provide psychological support for workplace stress, career transitions, disability claims, and vocational rehabilitation — helping you thrive professionally.",
     },
+    {
+        slug: "workshops",
+        icon: <Users size={32} strokeWidth={1.5} />,
+        title: "Workshops & Therapeutic Groups",
+        tagline: "Connect and heal in community.",
+        excerpt: "Evidence-based psychoeducational groups, virtual workshops, and parent support sessions designed to foster shared understanding and collective growth.",
+    },
 ];
 
 export default function ServicesPage() {
