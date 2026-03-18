@@ -291,6 +291,7 @@ For those dealing with workplace injury or disability, we provide psychological 
 export default function ServicePage() {
     const { slug } = useParams();
     const service = servicesData[slug];
+    const [openAssessment, setOpenAssessment] = useState(null);
 
     if (!service) {
         return (
