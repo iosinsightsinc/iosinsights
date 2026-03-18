@@ -80,7 +80,7 @@ export default function Hero() {
             </svg>
 
             {/* Main content */}
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 lg:px-12 py-16 md:py-20 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
+            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 lg:px-12 py-12 md:py-20 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-8">
                 
                 {/* Left: Text */}
                 <div className="flex-1 lg:w-3/5 text-left flex flex-col items-start lg:pr-12">
@@ -107,7 +107,7 @@ export default function Hero() {
                         transition={{ duration: 1, delay: 0.5 }}
                         style={{
                             fontFamily: "var(--font-serif)",
-                            fontSize: "clamp(3rem, 7vw, 5.5rem)",
+                            fontSize: "clamp(2.7rem, 9vw, 5.5rem)",
                             color: "#F4F3F1",  /* Ivory */
                             lineHeight: 1.05,
                             maxWidth: "1000px",
@@ -126,8 +126,8 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.7 }}
                         style={{
                             color: "rgba(244, 243, 241, 0.85)", fontWeight: 300,
-                            maxWidth: "700px", fontSize: "1.25rem", lineHeight: 1.8,
-                            marginBottom: "2rem",
+                            maxWidth: "700px", fontSize: "clamp(1.05rem, 4vw, 1.25rem)", lineHeight: 1.8,
+                            marginBottom: "1.5rem",
                         }}
                     >
                         Accessing support is not a sign of weakness — it is a sign of self-love. 🤍
@@ -138,16 +138,12 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.8 }}
-                        className="flex flex-wrap gap-3 mb-8"
+                        className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-8"
                     >
                         {["📍 In-Person — Alberta", "💻 Virtual — AB · NS · MB · SK"].map(label => (
-                            <span key={label} style={{
-                                padding: "0.45rem 1.2rem", borderRadius: "9999px",
-                                border: "1px solid rgba(222, 206, 191, 0.4)",  /* Blush border */
-                                color: "rgba(244, 243, 241, 0.9)",  /* Ivory text */
-                                fontFamily: "var(--font-sans)",
-                                fontSize: "0.7rem", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase",
-                            }}>
+                            <span key={label}
+                                className="px-3 py-1.5 md:px-5 md:py-2 rounded-full border border-[#DECEBF]/40 text-[#F4F3F1]/90 font-sans text-[0.6rem] md:text-[0.7rem] font-medium tracking-[0.05em] md:tracking-[0.1em] uppercase"
+                            >
                                 {label}
                             </span>
                         ))}
@@ -158,33 +154,17 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.9 }}
-                        style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
+                        className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto"
                     >
                         {/* Primary CTA: Terracotta */}
-                        <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" style={{
-                            backgroundColor: "#B57B66", color: "#F4F3F1",
-                            padding: "1rem 2.25rem", borderRadius: "9999px",
-                            fontFamily: "var(--font-sans)", fontSize: "0.85rem", fontWeight: 700,
-                            letterSpacing: "0.15em", textTransform: "uppercase", textDecoration: "none",
-                            transition: "all 0.3s", boxShadow: "0 4px 20px rgba(181, 123, 102, 0.4)",
-                            display: "inline-block",
-                        }}
-                        onMouseOver={e => { e.currentTarget.style.backgroundColor = "#9A6553"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-                        onMouseOut={e => { e.currentTarget.style.backgroundColor = "#B57B66"; e.currentTarget.style.transform = "translateY(0)"; }}
+                        <a href="https://iosinsights.janeapp.com/" target="_blank" rel="noreferrer" 
+                            className="bg-[#B57B66] text-[#F4F3F1] px-6 py-3.5 md:px-9 md:py-4 rounded-full font-sans text-[0.7rem] md:text-[0.85rem] font-bold tracking-[0.15em] uppercase no-underline transition-all duration-300 hover:bg-[#9A6553] hover:-translate-y-[2px] shadow-[0_4px_20px_rgba(181,123,102,0.4)] text-center w-full sm:w-auto"
                         >
                             Connect with Me
                         </a>
                         {/* Secondary CTA: Ivory ghost */}
-                        <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }} style={{
-                            backgroundColor: "transparent", color: "#F4F3F1",
-                            padding: "1rem 2.25rem", borderRadius: "9999px",
-                            fontFamily: "var(--font-sans)", fontSize: "0.85rem", fontWeight: 700,
-                            letterSpacing: "0.15em", textTransform: "uppercase", textDecoration: "none",
-                            border: "1.5px solid rgba(244, 243, 241, 0.35)",
-                            transition: "all 0.3s", display: "inline-block",
-                        }}
-                        onMouseOver={e => { e.currentTarget.style.backgroundColor = "rgba(244, 243, 241, 0.1)"; e.currentTarget.style.borderColor = "rgba(244, 243, 241, 0.55)"; }}
-                        onMouseOut={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.borderColor = "rgba(244, 243, 241, 0.35)"; }}
+                        <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }} 
+                            className="bg-transparent text-[#F4F3F1] px-6 py-3.5 md:px-9 md:py-4 rounded-full font-sans text-[0.7rem] md:text-[0.85rem] font-bold tracking-[0.15em] uppercase no-underline transition-all duration-300 hover:bg-[#F4F3F1]/10 hover:border-[#F4F3F1]/55 border-[1.5px] border-[#F4F3F1]/35 text-center w-full sm:w-auto"
                         >
                             Learn More
                         </a>
@@ -193,7 +173,7 @@ export default function Hero() {
 
                 {/* Right: Animated Logo */}
                 <motion.div
-                    className="flex-none lg:w-2/5 flex justify-center lg:justify-end lg:-mr-8"
+                    className="flex-none w-full lg:w-2/5 flex justify-center lg:justify-end lg:-mr-8 mt-6 lg:mt-0 px-8 sm:px-16 lg:px-0"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}

@@ -14,6 +14,8 @@ export default function SpinningLogo({ size = 120, innerScale = 1, variant = "bl
         <div style={{
             width: `${effectiveSize}px`, 
             height: `${effectiveSize}px`, 
+            maxWidth: "100%",
+            aspectRatio: "1/1",
             display: "flex", 
             alignItems: "center", 
             justifyContent: "center",
