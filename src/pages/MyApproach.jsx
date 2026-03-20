@@ -206,10 +206,10 @@ export default function MyApproach() {
                         fontFamily: "var(--font-serif)", fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
                         color: "var(--color-cream)", lineHeight: 1.6, fontStyle: "italic",
                     }}>
-                        If you're a human, you've likely had some type of hardship that has left you feeling 'off', 'triggered', or 'stuck'. My aim is to support your stride until you can return to a state of balance — emotionally and within every day life.
+                        Do the best you can until you know better. Then when you know better, do better.
                     </p>
                     <p style={{ color: "var(--color-lilac)", fontFamily: "var(--font-sans)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", marginTop: "2rem" }}>
-                        — Isoken (Iso) Ogumbor
+                        — Maya Angelou
                     </p>
                 </div>
             </motion.div>
@@ -252,6 +252,23 @@ export default function MyApproach() {
                                 {s}
                             </span>
                         ))}
+                    </div>
+
+                    <div style={{
+                        borderLeft: "3px solid var(--color-wine)",
+                        paddingLeft: "1.5rem",
+                        marginTop: "0.5rem",
+                    }}>
+                        <p style={{
+                            fontFamily: "var(--font-serif)", fontStyle: "italic",
+                            fontSize: "clamp(1.3rem, 2.2vw, 1.65rem)",
+                            color: "var(--color-text-dark)", lineHeight: 1.8,
+                        }}>
+                            If you're a human, you've likely had some type of hardship that has left you feeling 'off', 'triggered', or 'stuck'. My aim is to support your stride until you can return to a state of balance — emotionally and within every day life.
+                        </p>
+                        <p style={{ color: "var(--color-wine)", fontFamily: "var(--font-sans)", fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", marginTop: "1rem" }}>
+                            — Isoken (Iso) Ogumbor
+                        </p>
                     </div>
                 </motion.div>
             </div>
