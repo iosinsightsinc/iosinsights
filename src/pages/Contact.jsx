@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Printer } from "lucide-react";
 import FloatingOrbs from "../components/FloatingOrbs";
 
 export default function Contact() {
     return (
         <div style={{ backgroundColor: "var(--color-cream)", position: "relative", overflow: "hidden" }} className="w-full py-24 px-6">
             <FloatingOrbs variant="sage" />
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
 
                 {/* Left Side: Info */}
                 <motion.div
@@ -23,21 +23,22 @@ export default function Contact() {
                         }}>
                             Begin Your Journey to Clarity
                         </h1>
-                        <p style={{ fontSize: "1.1rem", color: "var(--color-text-muted)", fontWeight: 300, maxWidth: "460px" }}>
+                        <p style={{ fontSize: "1.1rem", color: "var(--color-text-muted)", fontWeight: 300 }}>
                             Whether you are ready to connect with me or have a few questions, our team is here to support you in untangling your mind.
                         </p>
                     </div>
 
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         {[
-                            { icon: <MapPin size={24} strokeWidth={1.5} />, title: "The Clinic", info: "363 SIOUX RD\nSHERWOOD PARK, AB T8A 4W7" },
-                            { icon: <Mail size={24} strokeWidth={1.5} />, title: "Email", info: "info@iosinsights.ca" },
-                            { icon: <Phone size={24} strokeWidth={1.5} />, title: "Phone", info: "825-965-9396" },
+                            { icon: <MapPin size={22} strokeWidth={1.5} />, title: "The Clinic", info: "363 SIOUX RD\nSHERWOOD PARK, AB T8A 4W7" },
+                            { icon: <Mail size={22} strokeWidth={1.5} />, title: "Email", info: "info@iosinsights.ca" },
+                            { icon: <Phone size={22} strokeWidth={1.5} />, title: "Phone", info: "825-965-9396" },
+                            { icon: <Printer size={22} strokeWidth={1.5} />, title: "Fax", info: "1-866-672-6479" },
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-4">
                                 <div style={{
                                     backgroundColor: "rgba(160, 89, 98,0.1)", color: "var(--color-wine)",
-                                    padding: "1rem", borderRadius: "50%",
+                                    padding: "0.80rem", borderRadius: "50%",
                                 }}>
                                     {item.icon}
                                 </div>
@@ -77,7 +78,7 @@ export default function Contact() {
                         </a>
                     </div>
                     
-                    <p style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", fontStyle: "italic", textAlign: "center", maxWidth: "80%" }}>
+                    <p style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", fontStyle: "italic", textAlign: "center", maxWidth: "80%", margin: "0 auto" }}>
                         If you have questions before booking, please feel free to call us directly at <strong>825-965-9396</strong>.
                     </p>
                 </motion.div>
