@@ -57,6 +57,7 @@ export default function Footer() {
                             ["Assessments", "/services/assessments"],
                             ["Vocational Support", "/services/vocational"],
                             ["Workshops & Groups", "/services/workshops"],
+                            ["Somatic Therapy", "/services/somatic"],
                         ].map(([label, href]) => (
                             <li key={label}>
                                 <Link to={href}

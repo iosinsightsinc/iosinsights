@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import SpinningLogo from "../components/SpinningLogo";
-import { Heart, Brain, Puzzle, ClipboardList, Briefcase, Monitor, ArrowRight, Wind, Users, Box } from "lucide-react";
+import { Heart, Brain, Puzzle, ClipboardList, Briefcase, Monitor, ArrowRight, Wind, Users, Box, Activity } from "lucide-react";
 import FloatingOrbs from "../components/FloatingOrbs";
 
 const services = [
@@ -67,6 +67,13 @@ const services = [
         title: "Workshops & Therapeutic Groups",
         tagline: "Connect and heal in community.",
         excerpt: "Evidence-based psychoeducational groups, virtual workshops, and parent support sessions designed to foster shared understanding and collective growth.",
+    },
+    {
+        slug: "somatic",
+        icon: <Activity size={32} strokeWidth={1.5} />,
+        title: "Somatic Therapy",
+        tagline: "Bridging mind, body, and nervous system.",
+        excerpt: "A body-based approach that helps you notice how stress, trauma, and emotional pain live in your nervous system — building safety, self-understanding, and the ability to heal.",
     },
 ];
 

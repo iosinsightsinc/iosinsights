@@ -17,6 +17,7 @@ const navLinks = [
             { label: "Assessments", href: "/services/assessments" },
             { label: "Vocational Support", href: "/services/vocational" },
             { label: "Workshops & Therapeutic Groups", href: "/services/workshops" },
+            { label: "Somatic Therapy", href: "/services/somatic" },
         ],
     },
     { label: "My Approach", href: "/approach" },

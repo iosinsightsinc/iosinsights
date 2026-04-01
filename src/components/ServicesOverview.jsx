@@ -57,6 +57,12 @@ const services = [
         excerpt: "Connect and heal in community through structured psychoeducational and therapeutic group offerings.",
         link: "/services/workshops",
     },
+    {
+        category: "Individual Therapy",
+        title: "Somatic Therapy",
+        excerpt: "A body-based approach that bridges mind and body, helping your nervous system heal from stress, trauma, and emotional pain.",
+        link: "/services/somatic",
+    },
 ];
 
 // EVERGREEN dark section background with Ivory cards

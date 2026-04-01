@@ -324,6 +324,51 @@ For those dealing with workplace injury or disability, we provide psychological 
             "Take away practical skills and workbooks for ongoing practice.",
         ],
     },
+    somatic: {
+        title: "Somatic Therapy",
+        subtitle: "Mind, Body & Nervous System Healing",
+        image: `${import.meta.env.BASE_URL}service-somatic.png`,
+        heroText: "Somatic therapy supports the connection between mind, body, emotion, and relationship.",
+        sections: [
+            {
+                heading: "Bridging the Gap Between Knowing and Feeling",
+                body: `Sometimes we understand something logically, but our body is still carrying the alarm. You may know exactly why you feel the way you do, yet still find yourself stuck in anxiety, shutdown, overwhelm, reactivity, or disconnection. Your thoughts may know you are safe, while your body still feels braced or on guard. Somatic therapy helps bridge that gap.
+
+Somatic therapy is a body-based approach that helps us notice how stress, trauma, and emotional pain can live not just in our thoughts, but also in our nervous system. In sessions, we gently pay attention to what is happening inside and around you, such as changes in breath, tension, heaviness, restlessness, warmth, numbness, movement, or the urge to protect, pull back, speak up, or shut down.`,
+            },
+            {
+                heading: "Going Slowly and Safely",
+                body: `Rather than forcing big emotional dives, we go slowly and safely. We move between moments of activation and moments of steadiness, helping your system build capacity without becoming overwhelmed. This helps create more safety and more room for emotional healing.
+
+My approach to somatic therapy is grounded in relationships and woven together with attachment, emotion-focused, and parts-based approaches. I understand symptoms not as defects, but as protective responses that developed for a reason. Together, we make sense of not just what you feel, but why your system learned to respond the way it did, what your body has been carrying, what emotions may need attention, and what different parts of you may be trying to protect.
+
+Through this process, we build more safety, more self-understanding, and more ability to respond rather than react.`,
+            },
+            {
+                heading: "Healing, Not Fixing",
+                body: `This work is not about forcing your body to calm down or getting rid of feelings. It is about helping your system feel supported enough to listen, process, and heal.`,
+            },
+        ],
+        highlights: {
+            heading: "Is Somatic Therapy Right for You?",
+            intro: "Somatic therapy can be especially helpful if you:",
+            items: [
+                "Feel stuck in patterns even when you understand them logically",
+                "Notice anxiety, shutdown, tension, or overwhelm in your body",
+                "Have experienced trauma, chronic stress, or difficult relationships",
+                "Struggle to identify emotions until they come out all at once",
+                "Want to feel more connected to yourself, your emotions, and others",
+            ],
+        },
+        howItWorks: [
+            "A comprehensive assessment to understand your unique nervous system responses.",
+            "Gently explore how stress, trauma, and emotion live in your body.",
+            "Build capacity by moving between activation and steadiness at a safe pace.",
+            "Integrate attachment, emotion-focused, and parts-based approaches.",
+            "Develop more self-understanding and the ability to respond rather than react.",
+            "Create lasting safety, connection, and emotional healing.",
+        ],
+    },
 
 };
 
@@ -507,6 +552,37 @@ export default function ServicePage() {
                         </div>
                     </motion.div>
                 )}
+                {/* Highlights (e.g. "Is Somatic Therapy Right for You?") */}
+                {service.highlights && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        style={{ backgroundColor: "rgba(160, 89, 98,0.04)", borderRadius: "1.5rem", padding: "3.5rem", border: "1px solid rgba(160, 89, 98,0.12)" }}
+                    >
+                        <h2 style={{
+                            fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)",
+                            color: "var(--color-text-dark)", marginBottom: "1rem", lineHeight: 1.2
+                        }}>
+                            {service.highlights.heading}
+                        </h2>
+                        <p style={{ color: "var(--color-text-muted)", fontWeight: 400, fontSize: "1.15rem", lineHeight: 1.8, marginBottom: "2rem" }}>
+                            {service.highlights.intro}
+                        </p>
+                        <div className="space-y-4">
+                            {service.highlights.items.map((item, i) => (
+                                <div key={i} className="flex gap-4 items-start">
+                                    <CheckCircle2 size={20} className="flex-shrink-0 mt-1" style={{ color: "var(--color-wine)" }} />
+                                    <p style={{ color: "var(--color-text-muted)", fontWeight: 400, fontSize: "1.15rem", lineHeight: 1.8 }}>
+                                        {item}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+
                 {/* How it works */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
