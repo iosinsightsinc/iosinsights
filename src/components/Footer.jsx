@@ -1,9 +1,44 @@
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import SpinningLogo from "./SpinningLogo";
 
 // EVERGREEN footer, Ivory text, Terracotta hover accents, Blush labels
 export default function Footer() {
+    const sealRef = useRef(null);
+
+    useEffect(() => {
+        if (!sealRef.current) return;
+        const anchor = sealRef.current;
+
+        // The verified-seal.js listens for DOMContentLoaded which has already
+        // fired by the time React mounts, so we replicate its logic directly:
+        // decode the data-code URL and inject the JSONP callback script.
+        const callbackUrl = atob(
+            "aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzEwODM4NDQ/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="
+        );
+
+        window.sxcallback = function (data) {
+            anchor.setAttribute("target", "_top");
+            anchor.style.display = "block";
+            anchor.style.backgroundImage =
+                'url("data:image/svg+xml;base64,' + data.image.content + '")';
+            anchor.style.backgroundRepeat = "no-repeat";
+            anchor.style.width = parseInt(data.image.dimensions.width) + "px";
+            anchor.style.height = parseInt(data.image.dimensions.height) + "px";
+            anchor.title = data.name;
+        };
+
+        const script = document.createElement("script");
+        script.src = callbackUrl;
+        document.body.appendChild(script);
+
+        return () => {
+            script.remove();
+            delete window.sxcallback;
+        };
+    }, []);
+
     return (
         <footer style={{ backgroundColor: "#4D5E55" }}>
             {/* Main footer content */}
@@ -39,6 +74,9 @@ export default function Footer() {
                     >
                         Connect with Me
                     </a>
+                    {/* Professional verification provided by Psychology Today */}
+                    <a ref={sealRef} href="https://www.psychologytoday.com/profile/1083844"
+                       className="sx-verified-seal" style={{ marginTop: "1.5rem" }}></a>
                 </div>
 
                 {/* Services links */}

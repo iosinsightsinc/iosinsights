@@ -23,6 +23,7 @@ const navLinks = [
     { label: "My Approach", href: "/approach" },
     { label: "Resources", href: "/blog" },
     { label: "Contact", href: "/#contact" },
+    { label: "Fees & FAQ", href: "/#fees-faq" },
 ];
 
 /* ── Dropdown ── */

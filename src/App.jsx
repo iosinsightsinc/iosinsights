@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import MyApproach from "./pages/MyApproach";
 import Resources from "./pages/Resources";
 import ScrollToTop from "./components/ScrollToTop";
+import FeesAndFAQ from "./components/FeesAndFAQ";
 function App() {
   return (
     <Router>
@@ -25,6 +26,9 @@ function App() {
                 <ServicesOverview />
                 <div id="contact">
                   <Contact />
+                </div>
+                <div id="fees-faq">
+                  <FeesAndFAQ />
                 </div>
               </>
             } />
