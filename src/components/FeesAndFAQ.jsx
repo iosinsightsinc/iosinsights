@@ -13,7 +13,7 @@ const individualFees = [
     {
         title: "Intake Appointment",
         description: "Intake appointments are longer sessions designed to explore your concerns, relevant history, current challenges, and goals for therapy. This helps us begin building a clearer understanding of what support may be most helpful.",
-        detail: null,
+        detail: "80 minutes",
         price: "$300",
     },
 ];
@@ -257,16 +257,16 @@ export default function FeesAndFAQ() {
                                 </h4>
                             </div>
                             <p style={{
-                                color: "rgba(252, 246, 242, 0.85)", fontWeight: 300,
-                                fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "1rem",
+                                color: "var(--color-cream)", fontWeight: 400,
+                                fontSize: "1rem", lineHeight: 1.8, marginBottom: "1rem",
                             }}>
                                 Reports prepared for insurance, third parties, or physician consultation.
                             </p>
                             <span style={{
-                                fontFamily: "var(--font-serif)", fontSize: "1.5rem",
-                                color: "var(--color-cream)", fontWeight: 500,
+                                fontFamily: "var(--font-serif)", fontSize: "1.8rem",
+                                color: "var(--color-cream)", fontWeight: 600,
                             }}>
-                                $300 <span style={{ fontSize: "0.85rem", fontWeight: 300, color: "rgba(252, 246, 242, 0.85)" }}>per report</span>
+                                $300 <span style={{ fontSize: "0.95rem", fontWeight: 400, color: "var(--color-cream)" }}>per report</span>
                             </span>
                         </div>
                         <div style={{
@@ -277,8 +277,8 @@ export default function FeesAndFAQ() {
                         }}>
                             <AlertCircle size={18} strokeWidth={1.5} style={{ color: "var(--color-lilac)", flexShrink: 0, marginTop: "2px" }} />
                             <p style={{
-                                color: "rgba(252, 246, 242, 0.85)", fontWeight: 300,
-                                fontSize: "0.85rem", lineHeight: 1.7, fontStyle: "italic",
+                                color: "var(--color-cream)", fontWeight: 400,
+                                fontSize: "0.95rem", lineHeight: 1.7, fontStyle: "italic",
                             }}>
                                 I currently provide individual services only and do not offer couples therapy.
                             </p>
